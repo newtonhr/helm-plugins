@@ -1,0 +1,17 @@
+{
+  "name": "helm-studio",
+  "version": "0.4.0",
+  "description": "Helm Studio: reklame, oglasi, objave, video scenariji i prvi koraci za webshop klijenta. Skillovi vode posao; znanje struke dolazi iz Helma (studio_znanje).",
+  "author": {
+    "name": "Newton d.o.o."
+  },
+  "keywords": [
+    "helm",
+    "studio",
+    "drustvene-mreze",
+    "reklame",
+    "oglasi",
+    "video",
+    "webshop"
+  ]
+}

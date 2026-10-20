@@ -1,0 +1,29 @@
+{
+  "skill_name": "studio-brand",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Zapamti da naši kupci uvijek pitaju za dostavu na otoke.",
+      "expected_output": "Čita studio_brand. Predloži to kao prigovor ili jezik kupaca u nacrtu dopune. Kaže da nacrt upisuje Newton; ništa ne sprema sam.",
+      "assertions": [
+        "Poziva studio_brand",
+        "Svrsta unos u odjeljak (prigovori ili jezik kupaca)",
+        "Ne tvrdi da je spremio u Helm",
+        "Ne izmišlja dodatne podatke"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Tko su nam kupci i kako da pričamo s njima?",
+      "expected_output": "Čita brand paket, pita najviše 3 pitanja za ono što fali, poziva studio_znanje(\"psihologija-kupca\"), napiše nacrt po odjeljcima s izvorom.",
+      "assertions": [
+        "Pita najviše 3 pitanja odjednom",
+        "Poziva studio_znanje psihologija-kupca",
+        "Svaka tvrdnja ima izvor",
+        "Ne mijenja boje, fontove ni logo"
+      ],
+      "files": []
+    }
+  ]
+}

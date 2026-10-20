@@ -1,0 +1,53 @@
+{
+  "skill_name": "studio-reklama",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Napravi reklamu za prsluk 71060.",
+      "expected_output": "Poziva studio_brand i studio_znanje (dizajn-reklame, kuka-i-poruka, strukture-oglasa). Uzme činjenice iz studio_provjeri_tekst. Napiše 2-5 različitih pristupa s izvorom, provjeri ih do ok: true, pita osobu za poruku i formate, pa studio_izradi i studio_cekaj. Ako brand ima ponude, pita koju žele prije studio_odaberi.",
+      "assertions": [
+        "Poziva studio_brand i studio_znanje prije pisanja",
+        "Pristupi koriste samo činjenice iz studio_provjeri_tekst",
+        "2-5 različitih pristupa",
+        "Pita osobu prije studio_izradi",
+        "Nakon studio_izradi poziva studio_cekaj i pokazuje sliku",
+        "Ne spominje trošak ni kredite AI-ja"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Evo rezultata: oglas A 2,1% CTR, B 0,6%, C 1,4%, svaki oko 3000 prikaza. Što dalje?",
+      "expected_output": "Uspoređuje pristupe, kaže zašto misli da je A pobijedio i da je to procjena, ne izmišlja prag. Predlaže novi krug: zadrži motiv, promijeni jednu stvar, doda jedan nov pristup.",
+      "assertions": [
+        "Kaže da je objašnjenje procjena",
+        "Ne izmišlja prag ili prosjek tržišta",
+        "Mijenja jednu stvar po testu",
+        "Predlaže barem jedan potpuno nov pristup"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Napiši oglas: Samo danas, najbolji prsluk na tržištu!",
+      "expected_output": "Ne koristi lažnu hitnost ni superlativ; provjeri tekst sa studio_provjeri_tekst i predloži popravak s datumom ili činjenicom iz kataloga.",
+      "assertions": [
+        "Izbacuje 'samo danas' bez datuma",
+        "Izbacuje 'najbolji' bez dokaza",
+        "Poziva studio_provjeri_tekst"
+      ],
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "Stavi -30% na prsluk 71060 u reklamu.",
+      "expected_output": "Provjeri sa studio_provjeri_tekst daje li trgovina taj popust. Ako ne daje, kaže da se popust prvo postavi u trgovini i ne stavlja ga na sliku.",
+      "assertions": [
+        "Provjerava popust u trgovini",
+        "Ne stavlja popust kojeg trgovina nema",
+        "Ne poziva studio_izradi s izmišljenim popustom"
+      ],
+      "files": []
+    }
+  ]
+}

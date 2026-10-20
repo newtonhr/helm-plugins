@@ -1,0 +1,29 @@
+{
+  "skill_name": "studio-objave",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Pripremi objave za Instagram i Facebook za sljedeći tjedan, tema priprema broda za zimu.",
+      "expected_output": "Poziva studio_brand, kampanja i tekst-instagram/tekst-facebook. Stupovi sadržaja, najviše jedna objava dnevno po mreži, promocija manjina, različit tekst po mreži.",
+      "assertions": [
+        "Poziva studio_znanje za svaku mrežu",
+        "Najviše jedna objava dnevno po mreži",
+        "Promocija je manjina objava",
+        "Tekst nije isti na obje mreže",
+        "Ne tvrdi da će objaviti ili zakazati"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Napravi vrtuljak o tome što treba za prvu sezonu na brodu.",
+      "expected_output": "Prva kartica zaustavlja pogled, svaka kartica ima smisla sama, gradi se oko jednog pitanja kupca. Slike preko studio-reklama nakon potvrde.",
+      "assertions": [
+        "Prva kartica je kuka",
+        "Svaka kartica ima smisla sama",
+        "Slike tek nakon potvrde osobe"
+      ],
+      "files": []
+    }
+  ]
+}

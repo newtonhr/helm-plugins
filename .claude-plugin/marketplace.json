@@ -7,7 +7,7 @@
     {
       "name": "helm-studio",
       "source": "./plugins/helm-studio",
-      "description": "Helm Studio: reklamne slike, objave, newsletter i kampanje za webshop klijenta preko Helma."
+      "description": "Helm Studio: reklamne slike, kratki video, objave, newsletter i kampanje za webshop klijenta preko Helma."
     }
   ]
 }

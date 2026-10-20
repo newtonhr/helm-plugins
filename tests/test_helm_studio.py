@@ -85,10 +85,16 @@ def test_the_ad_skill_checks_the_copy_and_asks_before_spending() -> None:
     assert "nijedna" in body and "čekaj „da”" in body
 
 
-def test_the_video_skill_never_promises_a_video() -> None:
+def test_the_video_skill_checks_asks_then_cuts() -> None:
     _, body = _skill("studio-video")
-    assert "**Studio ne radi video.**" in body
-    assert "studio_izradi" not in body
+    check = body.index("studio_video_provjeri(knjiga)")
+    ask = body.index("**Pitaj osobu**")
+    make = body.index("studio_video_izradi(knjiga)")
+    wait = body.index("studio_cekaj(posao)")
+    assert check < ask < make < wait
+    assert "Čekaj „da”" in body
+    assert "studio_izradi(" not in body
+    assert "pristan" in body and "AI ne radi proizvod" in body
 
 
 @pytest.mark.parametrize("name", sorted(EXPECTED))

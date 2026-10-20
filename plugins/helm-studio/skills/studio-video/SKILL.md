@@ -1,38 +1,52 @@
 ---
 name: studio-video
-description: Helm Studio — scenarij i popis kadrova za kratki video (Reels, TikTok, Shorts, video oglas) za webshop klijenta. Studio ne radi video. Pokreni kad korisnik u Helm Studiju traži reel, TikTok, video reklamu ili scenarij za proizvod iz shopa klijenta. Only when working through Helm Studio.
+description: Helm Studio — kratki video (Reels, TikTok, Shorts, video oglas) za webshop ili uslugu klijenta, iz njegovih pravih fotografija i klipova; Studio ga montira. Pokreni kad korisnik u Helm Studiju traži reel, TikTok, video reklamu, video za uslugu ili scenarij. Only when working through Helm Studio.
 ---
 
 # Kratki video
 
-**Studio ne radi video.** Daje scenarij i popis kadrova; statične kadrove 9:16 iz pravih
-fotki proizvoda može napraviti `studio-reklama`. Video snima ili slaže čovjek (mobitel,
-aplikacija za montažu). Reci to osobi na početku.
+Ti si redatelj. Studio montira video iz pravih fotografija i klipova klijenta. AI nikad
+ne radi proizvod, ljude, tekst, logo ni cijenu.
 
 ## Prije početka
 
-- Mreža i koliko kratko video može biti.
-- Cilj: upoznati proizvod, pokazati upotrebu ili prodati?
-- Mogu li snimiti proizvod mobitelom? Ima li osoba koja govori u kameru?
+1. `studio_brand`, zatim `studio_znanje("video-redatelj")`. Za uslugu (salon, servis) i
+   `studio_znanje("video-usluge")`.
+2. Pitaj osobu, s prijedlogom za svako:
+   - organsko ili plaćeno, i koja mreža;
+   - što nudimo i do kada vrijedi;
+   - kako se kupac javlja (poveznica, poruka, telefon, rezervacija);
+   - tko je u kadru i ima li pisani pristanak;
+   - govori li netko u kameru.
+3. `studio_materijali`: koje fotografije i klipove imamo. Novi materijal osoba šalje
+   preko `studio_pozadine_link` (obrazac „Klip”).
 
 ## Koraci
 
-1. `studio_brand`, `studio_znanje("video-scenarij")` i za mrežu
-   `studio_znanje("tekst-tiktok")` ili `studio_znanje("tekst-instagram")`.
-2. Početak i strukturu odaberi iz vodiča `video-scenarij` (odjeljci „Početak” i
-   „Strukture”).
-3. Za svaki kadar: trajanje, slika, izgovoreno, natpis. Pravila za zvuk i natpise su u
-   odjeljku „Zvuk i tekst”.
-4. Kadrove s proizvodom može dati `studio-reklama` kao slike za story. Samo nakon
-   potvrde osobe.
-5. Popis kadrova koje treba snimiti mobitelom (proizvod u ruci, na brodu, u pokretu).
+1. Napiši jednu poruku i jedan poziv. Odaberi strukturu i recept iz vodiča.
+2. Predloži 2–3 različita koncepta u dvije rečenice. Osoba bira.
+3. Napiši knjigu snimanja: kadrovi, natpisi, kraj, dvije dodatne kuke, tekst objave,
+   3–5 hashtagova, naslovnica.
+4. `studio_video_provjeri(knjiga)` (besplatno). Popravi što kaže. Ponovi dok nije `ok`.
+5. Ako vrati `popis_snimanja`, pošalji ga osobi jednostavnim riječima i pričekaj klipove.
+6. **Pitaj osobu**: pokaži vremensku crtu (kadar po kadar, natpisi) i upozorenja.
+   Čekaj „da”.
+7. `studio_video_izradi(knjiga)`, pa odmah `studio_cekaj(posao)` dok ne kaže gotovo.
+   Pokaži ključne kadrove. Video se gleda i preuzima u galeriji.
+8. Reci osobi: glazbu dodaje u aplikaciji iz knjižnice za tvrtke; varijante A, B i C
+   imaju različite kuke za test.
+
+Ispravak: promijeni knjigu snimanja i ponovo provjeri. `studio_ispravi` ne radi za video.
 
 ## Nikad
 
-- Ne obećavaj gotov video ni AI video.
-- AI ne crta proizvod. Proizvod u pokretu se snima.
-- Nema izmišljenih brojeva ni recenzija u scenariju.
+- AI ne radi proizvod, ljude, kožu, lice ni rezultat tretmana.
+- Nema izmišljenih brojeva, recenzija ni obećanja (trajno, bezbolno, zajamčeno).
+- Cijena samo iz trgovine; ponuda s datumom.
+- Nitko u kadru bez pisanog pristanka.
+- Ne objavljuj. Objavu radi čovjek.
 
 ## Dalje
 
-`studio-objave` za tekst objave uz video, `studio-oglasi` za video oglas.
+`studio-objave` za tekst objave uz video, `studio-oglasi` za video oglas, `studio-reklama`
+za slike iste kampanje.

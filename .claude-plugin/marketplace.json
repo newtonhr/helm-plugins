@@ -1,0 +1,13 @@
+{
+  "name": "helm-plugins",
+  "owner": {
+    "name": "Newton d.o.o."
+  },
+  "plugins": [
+    {
+      "name": "helm-studio",
+      "source": "./plugins/helm-studio",
+      "description": "Helm Studio: reklamne slike, objave, newsletter i kampanje za webshop klijenta preko Helma."
+    }
+  ]
+}

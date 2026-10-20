@@ -1,21 +1,37 @@
 ---
 name: helm-studio
-description: Helm Studio — reklamne slike, objave za društvene mreže, newsletter i plan kampanje za webshop klijenta preko Helma (studio_* alati). Pokreni kad korisnik traži reklamu, objavu, slike za Instagram/Facebook/TikTok/LinkedIn, banner, newsletter, ideje za objave ili kampanju.
+description: Helm Studio — ulaz za posao u Helm Studiju (studio_* alati) za webshop klijenta, kad nije jasno koji je posao. Pokreni kad korisnik spominje Helm Studio ili Studio, ili traži reklamu, objavu ili kampanju za shop klijenta preko Helma. Only when working through Helm Studio.
 ---
 
 # Helm Studio
 
 Znanje struke (marketing, dizajn, društvene mreže, pravila oglašavanja) je u Helmu, ne u
-ovom pluginu. Plugin samo kaže kad koristiti Studio.
+ovom pluginu. Plugin kaže redoslijed posla i kad pitati osobu.
 
-1. Prvo pozovi `studio_znanje` bez teme: dobiješ popis tema i kada koju koristiti.
-2. Za posao pozovi `studio_znanje(tema)`: vodič, pravila (formati, dizajn) i primjeri.
-3. `studio_brand` daje brand paket klijenta. Brand paket ima prednost pred vodičem.
-4. Prije izrade provjeri tekst sa `studio_provjeri_tekst` (besplatno) i popravi što kaže.
-   Slike radi `studio_izradi`, najbolje s 2-5 različitih pristupa. AI nikad ne crta
-   proizvod, tekst, logo ni cijenu.
-5. Česti tokovi su i MCP promptovi u izborniku: `kampanja`, `objave-za-tjedan`,
-   `reklama-za-proizvod`.
+## Koji skill
+
+| Posao | Skill |
+|---|---|
+| Prvi put u Studiju, novi klijent ili zaposlenik | `studio-prvi-koraci` |
+| Publika, glas branda, „zapamti ovo” | `studio-brand` |
+| Reklamne slike za proizvod, oglas, banner | `studio-reklama` |
+| Kampanja na Meti ili Googleu, budžet, rezultati oglasa | `studio-oglasi` |
+| Objave, kalendar, newsletter | `studio-objave` |
+| Reel, TikTok, video reklama, scenarij | `studio-video` |
+
+Ako ništa ne odgovara: pozovi `studio_znanje` bez teme. Dobiješ popis tema i kada koju
+koristiti. Za posao pozovi `studio_znanje(tema)`.
+
+## Vrijedi uvijek
+
+1. `studio_brand` prvi. Brand paket klijenta ima prednost pred vodičem.
+2. Tekst prije slike provjeri sa `studio_provjeri_tekst` (besplatno). Popravi što kaže.
+3. Prije svakog koraka koji radi novu AI scenu pitaj osobu: `studio_izradi`, ispravak s
+   novom scenom, komentar ili „nijedna” u odabiru.
+4. Nakon `studio_izradi`, `studio_odaberi` i `studio_ispravi` pozovi `studio_cekaj` dok
+   ne kaže gotovo. Pokaži sliku iz odgovora.
+5. AI nikad ne crta proizvod, tekst, logo ni cijenu.
 6. Studio ništa ne objavljuje. Objavu radi čovjek.
-
-Bez ovog plugina sve radi isto: Helm sam kaže Claudeu da pozove `studio_znanje`.
+7. Brojevi, norme i popusti samo iz trgovine (`studio_provjeri_tekst`). Od osobe smiješ
+   uzeti samo recenzije, pitanja i komentare kupaca.
+8. Ne spominji trošak ni kredite AI-ja ni interne alate.

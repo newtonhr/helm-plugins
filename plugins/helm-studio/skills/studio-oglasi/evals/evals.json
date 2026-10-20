@@ -1,0 +1,28 @@
+{
+  "skill_name": "studio-oglasi",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Isplati li se nama oglašavati na Facebooku s 300 eura mjesečno?",
+      "expected_output": "Pita cilj i mjeru, poziva studio_znanje(\"kampanja\"), predloži strukturu testiranje/skaliranje, široku publiku, više različitih koncepata, ne obećava ROAS.",
+      "assertions": [
+        "Pita za cilj i mjeru",
+        "Poziva studio_znanje kampanja",
+        "Ne obećava rezultat",
+        "Ne traži pristup oglasnom računu"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Oglas radi 2 dana, 400 prikaza, 0 kupnji. Ugasiti?",
+      "expected_output": "Kaže da je rano za presudu; ne izmišlja prag ako ga vodič nema; preporuči čekanje.",
+      "assertions": [
+        "Kaže da je rano",
+        "Ne izmišlja brojčani prag",
+        "Ne gasi oglas samo zbog nula kupnji"
+      ],
+      "files": []
+    }
+  ]
+}

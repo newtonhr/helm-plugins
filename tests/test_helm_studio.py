@@ -1,7 +1,8 @@
-"""Checks on the helm-studio plugin, moved from marina-ops-mcp with the plugin.
+"""Checks on the helm-studio plugin.
 
-The plugin stays thin: one skill that points at Helm's own knowledge (studio_znanje) and
-sends Claude through the free copy check before any image is made.
+The plugin stays thin: its skills say the order of the work and when to ask the person;
+the trade knowledge lives in Helm (studio_znanje). Every topic and tool a skill names must
+exist in the server (tests/katalog.json, written by scripts/katalog.py).
 """
 from __future__ import annotations
 
@@ -9,28 +10,99 @@ import json
 import re
 from pathlib import Path
 
-PLUGIN = Path(__file__).resolve().parents[1] / "plugins" / "helm-studio"
-SKILL = PLUGIN / "skills" / "helm-studio" / "SKILL.md"
+import pytest
+
+ROOT = Path(__file__).resolve().parents[1]
+PLUGIN = ROOT / "plugins" / "helm-studio"
+SKILLS = PLUGIN / "skills"
+KATALOG = json.loads((ROOT / "tests" / "katalog.json").read_text("utf-8"))
+TOPICS = set(KATALOG["teme"]) | set(KATALOG["na_cekanju"])
+TOOLS = set(KATALOG["alati"])
+MCP_PROMPTS = {"kampanja", "objave-za-tjedan", "reklama-za-proizvod"}
+EXPECTED = {"helm-studio", "studio-brand", "studio-reklama", "studio-oglasi",
+            "studio-objave", "studio-video", "studio-prvi-koraci"}
 
 
-def test_the_plugin_is_thin_and_points_at_helm() -> None:
-    skills = sorted(p.name for p in (PLUGIN / "skills").iterdir())
-    assert skills == ["helm-studio"]
-    text = SKILL.read_text(encoding="utf-8")
-    assert "studio_znanje" in text
-    assert "prednost" in text
-    assert not re.search(r"\b\d{3,4}\s*[x×]\s*\d{3,4}\b", text)
-    assert len(text.split()) < 300
+def _skill(name: str) -> tuple[dict[str, str], str]:
+    text = (SKILLS / name / "SKILL.md").read_text("utf-8")
+    m = re.match(r"---\n(.*?)\n---\n(.*)", text, re.S)
+    assert m, name
+    meta = dict(line.split(": ", 1) for line in m.group(1).splitlines())
+    return meta, m.group(2)
 
 
-def test_the_skill_sends_claude_through_the_copy_check() -> None:
-    assert "studio_provjeri_tekst" in SKILL.read_text(encoding="utf-8")
+def test_the_plugin_has_one_skill_per_job() -> None:
+    assert {p.name for p in SKILLS.iterdir()} == EXPECTED
+
+
+@pytest.mark.parametrize("name", sorted(EXPECTED))
+def test_each_skill_is_named_and_described_for_helm(name: str) -> None:
+    meta, body = _skill(name)
+    assert meta["name"] == name
+    assert meta["description"].startswith("Helm Studio")
+    assert len(meta["description"]) < 1024
+    assert "Helm" in meta["description"] and "webshop" in meta["description"]
+    assert len(body.split()) < 450, "the skill carries knowledge that belongs in Helm"
+    assert "studio_brand" in body
+
+
+@pytest.mark.parametrize("name", sorted(EXPECTED))
+def test_every_topic_and_tool_a_skill_names_exists_in_helm(name: str) -> None:
+    _, body = _skill(name)
+    for topic in re.findall(r'studio_znanje\("([^"]+)"\)', body):
+        assert topic in TOPICS, f"{name}: unknown topic {topic}"
+    for word in re.findall(r"`([a-z]+(?:-[a-z]+)+)`", body):
+        assert word in TOPICS | MCP_PROMPTS | EXPECTED, f"{name}: unknown `{word}`"
+    for tool in re.findall(r"\bstudio_[a-z_]+", body):
+        assert tool in TOOLS, f"{name}: unknown tool {tool}"
+
+
+@pytest.mark.parametrize("name", sorted(EXPECTED))
+def test_no_skill_carries_secrets_client_names_cost_or_sizes(name: str) -> None:
+    _, body = _skill(name)
+    assert not re.search(r"https?://|cnu_|tok_|/c/", body)
+    assert not re.search(r"Lalizas|Marina Stores|Stjepan|Darko", body)
+    assert "studio_potrosnja" not in body
+    assert not re.search(r"troši kredit|kredite paketa|cijena AI", body)
+    assert not re.search(r"\b\d{3,4}\s*[x×]\s*\d{3,4}\b", body)
+
+
+def test_the_entry_skill_points_at_helm_and_the_copy_check() -> None:
+    _, body = _skill("helm-studio")
+    assert "studio_znanje" in body
+    assert "prednost" in body
+    assert "studio_provjeri_tekst" in body
+
+
+def test_the_ad_skill_checks_the_copy_and_asks_before_spending() -> None:
+    _, body = _skill("studio-reklama")
+    check = body.index("studio_provjeri_tekst(proizvodi, pristupi")
+    ask = body.index("**Pitaj osobu**")
+    make = body.index("studio_izradi(")
+    wait = body.index("studio_cekaj(posao)")
+    assert check < ask < make < wait
+    assert body.index("studio_odaberi") > make
+    assert "nijedna" in body and "čekaj „da”" in body
+
+
+def test_the_video_skill_never_promises_a_video() -> None:
+    _, body = _skill("studio-video")
+    assert "**Studio ne radi video.**" in body
+    assert "studio_izradi" not in body
+
+
+@pytest.mark.parametrize("name", sorted(EXPECTED))
+def test_each_skill_has_evals(name: str) -> None:
+    data = json.loads((SKILLS / name / "evals" / "evals.json").read_text("utf-8"))
+    assert data["skill_name"] == name
+    assert len(data["evals"]) >= 2
+    for e in data["evals"]:
+        assert e["prompt"] and e["expected_output"] and e["assertions"]
 
 
 def test_the_marketplace_lists_the_plugin_at_its_folder() -> None:
-    root = Path(__file__).resolve().parents[1]
-    market = json.loads((root / ".claude-plugin" / "marketplace.json").read_text("utf-8"))
+    market = json.loads((ROOT / ".claude-plugin" / "marketplace.json").read_text("utf-8"))
     [entry] = [p for p in market["plugins"] if p["name"] == "helm-studio"]
-    assert (root / entry["source"]).resolve() == PLUGIN
+    assert (ROOT / entry["source"]).resolve() == PLUGIN
     manifest = json.loads((PLUGIN / ".claude-plugin" / "plugin.json").read_text("utf-8"))
     assert manifest["name"] == "helm-studio"

@@ -1,0 +1,28 @@
+{
+  "skill_name": "studio-video",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Napravi mi TikTok video za sidro 501802.",
+      "expected_output": "Kaže odmah da Studio ne radi video. Daje scenarij s kukom u tri dijela (slika, izgovoreno, natpis), kadrove s trajanjem i natpisima, popis što snimiti mobitelom, i nudi slike 9:16 preko studio-reklama.",
+      "assertions": [
+        "Kaže da Studio ne radi video",
+        "Kuka ima tri dijela koji se ne ponavljaju",
+        "Svaka važna rečenica je i natpis",
+        "Daje popis kadrova za mobitel",
+        "Ne obećava AI video"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Možeš li napraviti video gdje se sidro okreće u moru?",
+      "expected_output": "Kaže da AI ne crta proizvod i da se proizvod u pokretu snima; predloži kako to snimiti.",
+      "assertions": [
+        "Ne obećava AI video proizvoda",
+        "Predlaže snimanje mobitelom"
+      ],
+      "files": []
+    }
+  ]
+}

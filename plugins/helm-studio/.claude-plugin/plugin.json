@@ -1,9 +1,17 @@
 {
   "name": "helm-studio",
-  "version": "0.3.0",
-  "description": "Helm Studio: reklamne slike, objave, newsletter i kampanje za webshop klijenta. Tanak plugin — znanje struke dolazi iz Helma (studio_znanje); bez plugina sve radi isto.",
+  "version": "0.4.0",
+  "description": "Helm Studio: reklame, oglasi, objave, video scenariji i prvi koraci za webshop klijenta. Skillovi vode posao; znanje struke dolazi iz Helma (studio_znanje).",
   "author": {
     "name": "Newton d.o.o."
   },
-  "keywords": ["helm", "studio", "drustvene-mreze", "reklame", "webshop"]
+  "keywords": [
+    "helm",
+    "studio",
+    "drustvene-mreze",
+    "reklame",
+    "oglasi",
+    "video",
+    "webshop"
+  ]
 }

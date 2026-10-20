@@ -1,4 +1,4 @@
-**Trebam od Vas: odluke P1–P7 (§1) i GO za dio A. Ništa se ne gradi prije GO.**
+**Stanje 20. 10.: GO za dio A (Vi, 15:53). Dio A i test iz dijela D su na grani; P2–P7 po mom prijedlogu. Spajanje na Vaš „da”.**
 
 # Helm Studio plugin za Claude — plan (20. 10. 2026.)
 
@@ -103,7 +103,7 @@ Svaki skill ima isti kostur, najviše ~80 redaka:
 ## 4. Što ide u Helm, ne u plugin (dio B)
 
 Nove ideje iz upstream v2. U vodičima ih danas nema [O] (`grep` u `task.md`).
-Usporedio sam s PR-om #15 [O]. On već pokriva strukture oglasa, faze kupnje, vrtuljak i
+Usporedio sam s PR-om #15 [O] (spojen u `main` 20. 10.). On već pokriva strukture oglasa, faze kupnje, vrtuljak i
 „AI izgled” slike. Te stavke ovdje izbacujem. Ostaje samo ovo:
 
 | Ideja | Kamo | Kako |
@@ -170,6 +170,19 @@ Pokrećem ih ručno, ne u CI-ju.
 - D1: pytest je zelen i pada kad skill spomene nepostojeću temu ili alat.
 - B1: svaka nova tvrdnja u vodiču ima izvor i datum provjere.
 - C1: redak „naučeno” bez dokaza se odbija.
+
+## 7b. Nalazi kritičara (20. 10., dio A)
+
+Ugrađeno u skillove: `studio_cekaj` nakon izrade, odabira i ispravka; ponude samo kad ih
+brand paket ima; nema spominjanja kredita; popust samo iz trgovine; pitanje prije svake
+nove AI scene; provjera `generation` i `provisional`; znanje koje još nije u vodičima
+izbačeno iz skillova (čeka dio B); uži okidači („Only when working through Helm Studio”).
+
+Ostaje za server (`marina-ops-mcp`, zaseban PR, [O] na `main` 077df8f):
+- MCP prompt `kampanja` kaže „reci da izrada troši kredite”. Klijent ne smije vidjeti
+  trošak.
+- MCP prompt `reklama-za-proizvod` pokreće `studio_izradi` bez pitanja osobi i bez
+  `studio_cekaj`. Dok se ne popravi, skill `helm-studio` ga ne preporučuje.
 
 ## 8. Rizici
 

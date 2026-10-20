@@ -1,27 +1,29 @@
-# Helm Studio — plugin (neobavezan)
+# Helm Studio — plugin za Claude
 
-Plugin je tanak: jedan skill, `helm-studio`, koji kaže kad koristiti Studio i da znanje
-dolazi iz Helma. **Bez plugina sve radi isto** — u svakom MCP klijentu (Claude, Cowork,
-Claude Code) Helm sam daje upute serveru i alat `studio_znanje`.
+Sedam skillova vodi posao u Helm Studiju korak po korak. **Znanje struke ostaje u Helmu**
+(`studio_znanje`, pravila, primjeri); skillovi ga pozivaju po imenu teme. Bez plugina sve
+radi isto, jer Helm sam daje upute i znanje svakom MCP klijentu. Plugin daje bolji tok i
+bolja pitanja.
 
-Gdje je znanje (u Helmu, `src/marina_ops/studio/`):
-
-| Vrsta | Mjesto | Kako ga Claude dobiva |
+| Skill | Posao | Uzor (marketingskills v2.13.0, MIT) |
 |---|---|---|
-| Brojevi i pravila (dimenzije, sigurne zone, duljine, kontrast) | `pravila/formati.yaml`, `pravila/dizajn.yaml` | kod ih provjerava; `studio_znanje` ih vraća uz vodič |
-| Načela i postupci | `znanje/*.md` (13 vodiča) | `studio_znanje(tema)` |
-| Primjeri (dobro / loše, zašto) | `primjeri/<tema>/` | `studio_znanje(tema)` |
-| Recept za scenu (Nano Banana) | vodič `fotografija-proizvoda`, `pravila/dizajn.yaml` | `studio_izradi` ga čita sam |
+| `helm-studio` | ulaz: prepozna posao i preda ga | — |
+| `studio-prvi-koraci` | novi klijent ili zaposlenik: najkraći put do prvog seta | onboarding |
+| `studio-brand` | publika, prigovori, jezik kupaca, dokazi, glas, naučeno | product-marketing |
+| `studio-reklama` | reklamne slike: pristupi, provjera teksta, 4 ponude, odabir | ad-creative |
+| `studio-oglasi` | plan kampanje na Meti/Googleu i tjedna provjera brojeva | ads |
+| `studio-objave` | stupovi sadržaja, kalendar, tekst po mreži, vrtuljak | social |
+| `studio-video` | scenarij i kadrovi; Studio ne radi video | video |
 
-Alati: `studio_znanje`, `studio_brand`, `studio_izradi`, `studio_status`, `studio_ispravi`,
-`studio_galerija`, `studio_potrosnja`, `studio_pozadine_link`, `studio_pozadine`,
-`studio_pozadina_ukloni`. MCP promptovi: `kampanja`, `objave-za-tjedan`,
-`reklama-za-proizvod`.
+Svaki skill ima `evals/evals.json`: upit, očekivani tok i provjere. Evals pokreću
+Claudea i troše Claude tokene; pokreću se ručno. U evalsima `studio_izradi` se ne smije
+stvarno pozvati.
 
 Pravila koja vrijede uvijek:
 
 - AI nikad ne crta proizvod, tekst, logo ni cijenu.
 - Brand paket klijenta ima prednost pred vodičem; zakonska pravila vrijede uvijek.
+- Prije `studio_izradi` (troši AI) Claude pita osobu.
 - Studio ništa ne objavljuje. Objavu radi čovjek.
 
-Instalacija: samo datoteke u repou; plugin se ne instalira automatski.
+Plugin ne nosi URL konektora. Helm konektor je osobna vjerodajnica i dodaje se zasebno.

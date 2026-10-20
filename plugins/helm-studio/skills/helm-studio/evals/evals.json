@@ -1,0 +1,29 @@
+{
+  "skill_name": "helm-studio",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Treba mi nešto za Instagram za naš shop.",
+      "expected_output": "Poziva studio_brand. Prepozna posao (objava ili reklama) i preda ga pravom skillu, ili pita jedno pitanje da razluči. Ne poziva studio_izradi.",
+      "assertions": [
+        "Poziva studio_brand prije ostalog",
+        "Bira studio-objave ili studio-reklama, ili pita jedno pitanje",
+        "Ne poziva studio_izradi",
+        "Ne spominje trošak AI-ja"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Što sve Helm Studio može?",
+      "expected_output": "Kratko nabroji poslove (reklama, objave, oglasi, video scenarij, prvi koraci) i kaže da Studio ništa ne objavljuje. Ne nabraja sve alate.",
+      "assertions": [
+        "Nabroji poslove, ne alate",
+        "Kaže da Studio ne objavljuje",
+        "Kaže da AI ne crta proizvod",
+        "Ne spominje trošak AI-ja"
+      ],
+      "files": []
+    }
+  ]
+}

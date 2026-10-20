@@ -1,0 +1,29 @@
+{
+  "skill_name": "studio-prvi-koraci",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Prvi put sam u Studiju. Kako počinjem?",
+      "expected_output": "Poziva studio_brand i provjerava generation. Traži jedan proizvod. Prvi set vodi kroz studio-reklama: provjera teksta, pitanje osobi, studio_izradi, studio_cekaj. Ne nabraja sve alate i ne traži fotke ni reference unaprijed.",
+      "assertions": [
+        "Poziva studio_brand prvi",
+        "Traži točno jedan proizvod",
+        "Pita prije studio_izradi",
+        "Nakon izrade poziva studio_cekaj i pokazuje sliku",
+        "Ne traži fotke, fontove ni reference prije prvog seta"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Imamo novog klijenta, nemaju još brand paket. Što prvo?",
+      "expected_output": "Kad je paket privremen ili nema glas, pokreće studio-brand. Kaže što klijent treba: fotke u shopu, logo, boje, rečenica o glasu.",
+      "assertions": [
+        "Pokreće studio-brand kad je paket privremen",
+        "Navodi što novi klijent treba",
+        "Ne izmišlja brand podatke"
+      ],
+      "files": []
+    }
+  ]
+}

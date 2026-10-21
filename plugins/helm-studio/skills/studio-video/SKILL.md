@@ -29,6 +29,11 @@ ga omogućuje. AI ne crta tekst, logo ni cijenu; to dodaje montaža.
    natpisi, kraj, tekst objave, 3–5 hashtagova, naslovnica. Jedna varijanta.
    Nezgoda ima vidljiv uzrok (val, mokra ruka), a lice nosi emociju u krupnom planu.
    Kadar proizvoda ima `scena` (prazan set), a ne golu fotografiju iz kataloga.
+   Koristi sve fotografije proizvoda: `studio_video_provjeri` vraća
+   `fotografije_proizvoda`; `proizvod:<id>/2` je drugi kut ili oprema iz kutije.
+   Radnja kroz dva kadra ide s `nastavak: true` (počinje na `slika_kraj` prethodnog).
+   Inače rez; `zatamnjenje` za skok u vremenu, `bljesak` za udarac, najviše jedan
+   prijelaz na tri kadra.
 4. `studio_video_kadrovi(knjiga)`: ključne slike i setovi. Ponavljaj dok ne kaže `gotovo`.
    Pokaži slike osobi redom, kao strip. Sam prvo usporedi: isti brod, ista odjeća,
    proizvod kao na fotografiji. Prva slika je sidro: nju popravi prvu.

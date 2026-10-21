@@ -26,7 +26,9 @@ ga omogućuje. AI ne crta tekst, logo ni cijenu; to dodaje montaža.
 2. Predloži 2–3 priče u dvije rečenice. Osoba bira.
 3. Napiši knjigu snimanja: `likovi`, kadrovi (`slika_opis`, `ai_opis`, `proizvod`),
    natpisi, kraj, tekst objave, 3–5 hashtagova, naslovnica. Jedna varijanta.
-4. `studio_video_kadrovi(knjiga)`: ključne slike. Ponavljaj dok ne kaže `gotovo`.
+   Nezgoda ima vidljiv uzrok (val, mokra ruka), a lice nosi emociju u krupnom planu.
+   Kadar proizvoda ima `scena` (prazan set), a ne golu fotografiju iz kataloga.
+4. `studio_video_kadrovi(knjiga)`: ključne slike i setovi. Ponavljaj dok ne kaže `gotovo`.
    Pokaži slike osobi redom, kao strip. Popravi `slika_opis` ili `likovi` gdje ne valja.
 5. Kad osoba kaže da: `studio_video_kadrovi(knjiga, odobri=[kf_…])`.
 6. `studio_video_provjeri(knjiga)` (besplatno). Popravi što kaže. Ponovi dok nije `ok`.
@@ -43,6 +45,7 @@ ponovo. `studio_ispravi` ne radi za video.
 
 - AI ne crta tekst, logo ni cijenu.
 - Proizvod ne radi ništa što stvarno ne može.
+- Nitko ništa ne baca. U opisu nema „baci”, „ispusti” ni „ispadne”, nego uzrok pa klizanje.
 - Nema izmišljenih brojeva, recenzija ni obećanja (trajno, bezbolno, zajamčeno).
 - Za usluge nema AI kože, rezultata tretmana ni prije/poslije.
 - Nema AI kadra bez odobrene ključne slike, osim scene bez ljudi i proizvoda.

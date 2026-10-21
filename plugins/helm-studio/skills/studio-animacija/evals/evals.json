@@ -1,0 +1,28 @@
+{
+  "skill_name": "studio-animacija",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Napravi animaciju VHF stanice da privuče pažnju na stranici proizvoda.",
+      "expected_output": "Čita studio_znanje(\"animacije\"). Predlaže pokret iz jedne fotke (npr. ulazak ili svjetlo), pozadinu brand i format kvadrat. Kaže cijenu u tokenima. Poziva studio_animacija, pokazuje ključnu sliku, čeka „da”, pa poziva s odobri i studio_cekaj.",
+      "assertions": [
+        "Pokret radi iz jedne fotke",
+        "Pokazuje ključnu sliku i čeka odobrenje",
+        "Kaže cijenu u tokenima prije izrade",
+        "Nema teksta ni cijene u animaciji"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Neka se prsluk napuše u animaciji.",
+      "expected_output": "Provjerava fotke sa studio_provjera_fotki. Ako nema prave fotke napuhanog prsluka, kaže da napuhavanje treba tu fotku i predlaže pokret iz jedne fotke (njihanje, odskok). Ako fotka postoji, šalje je kao fotka.",
+      "assertions": [
+        "Ne radi napuhavanje bez prave fotke tog stanja",
+        "Predlaže pokret iz jedne fotke",
+        "Ne izmišlja izgled napuhanog prsluka"
+      ],
+      "files": []
+    }
+  ]
+}

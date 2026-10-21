@@ -39,8 +39,8 @@ ga omogućuje. AI ne crta tekst, logo ni cijenu; to dodaje montaža.
    proizvod kao na fotografiji. Prva slika je sidro: nju popravi prvu.
 5. Kad osoba kaže da: `studio_video_kadrovi(knjiga, odobri=[kf_…])`.
 6. `studio_video_provjeri(knjiga)` (besplatno). Popravi što kaže. Ponovi dok nije `ok`.
-7. **Pitaj osobu**: pokaži vremensku crtu, natpise i koliko AI sekundi video troši.
-   Čekaj „da”.
+7. **Pitaj osobu**: pokaži vremensku crtu, natpise i tokene novih AI sekundi
+   (`studio_tokeni`). Čekaj „da”.
 8. `studio_video_izradi(knjiga)`, pa odmah `studio_cekaj(posao)` dok ne kaže gotovo.
    Pokaži ključne kadrove. Video se gleda i preuzima u galeriji.
 9. Reci osobi: glazbu dodaje u aplikaciji iz knjižnice za tvrtke.

@@ -24,12 +24,14 @@ ga omogućuje. AI ne crta tekst, logo ni cijenu; to dodaje montaža.
 
 1. Napiši osjećaj u jednoj rečenici, jednu poruku i jedan poziv.
 2. Predloži 2–3 priče u dvije rečenice. Osoba bira.
-3. Napiši knjigu snimanja: `likovi`, kadrovi (`slika_opis`, `ai_opis`, `proizvod`),
+3. Napiši knjigu snimanja: `likovi`, `mjesto` (brod: vrsta, boje, paluba), kadrovi
+   (`slika_opis`, `slika_kraj` gdje radnja završi, `ai_opis`, `proizvod`),
    natpisi, kraj, tekst objave, 3–5 hashtagova, naslovnica. Jedna varijanta.
    Nezgoda ima vidljiv uzrok (val, mokra ruka), a lice nosi emociju u krupnom planu.
    Kadar proizvoda ima `scena` (prazan set), a ne golu fotografiju iz kataloga.
 4. `studio_video_kadrovi(knjiga)`: ključne slike i setovi. Ponavljaj dok ne kaže `gotovo`.
-   Pokaži slike osobi redom, kao strip. Popravi `slika_opis` ili `likovi` gdje ne valja.
+   Pokaži slike osobi redom, kao strip. Sam prvo usporedi: isti brod, ista odjeća,
+   proizvod kao na fotografiji. Prva slika je sidro: nju popravi prvu.
 5. Kad osoba kaže da: `studio_video_kadrovi(knjiga, odobri=[kf_…])`.
 6. `studio_video_provjeri(knjiga)` (besplatno). Popravi što kaže. Ponovi dok nije `ok`.
 7. **Pitaj osobu**: pokaži vremensku crtu, natpise i koliko AI sekundi video troši.

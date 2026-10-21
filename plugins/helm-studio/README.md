@@ -27,4 +27,8 @@ Pravila koja vrijede uvijek:
 - Prije `studio_izradi` i `studio_video_izradi` Claude pita osobu.
 - Studio ništa ne objavljuje. Objavu radi čovjek.
 
-Plugin ne nosi URL konektora. Helm konektor je osobna vjerodajnica i dodaje se zasebno.
+Plugin nosi Helm konektor (`.mcp.json`): `https://helm.newton.hr/mcp`. Adresa je ista za
+sve i nije tajna. Osoba se prijavi svojim osobnim kodom kad se spoji ("Prijava u Helm").
+Na claude.ai plugin pokazuje karticu Connectors: Connected, Not connected ili Not added.
+Tko već ima Helm s istom adresom, ne dobije drugi konektor. Kad Helm promijeni adresu,
+mijenja se i ovdje, u istoj verziji.

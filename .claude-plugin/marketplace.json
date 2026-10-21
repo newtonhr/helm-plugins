@@ -1,5 +1,6 @@
 {
   "name": "helm-plugins",
+  "description": "Newtonovi pluginovi za Claude koji rade s Helmom.",
   "owner": {
     "name": "Newton d.o.o."
   },

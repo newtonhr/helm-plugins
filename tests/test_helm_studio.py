@@ -114,3 +114,12 @@ def test_the_marketplace_lists_the_plugin_at_its_folder() -> None:
     assert (ROOT / entry["source"]).resolve() == PLUGIN
     manifest = json.loads((PLUGIN / ".claude-plugin" / "plugin.json").read_text("utf-8"))
     assert manifest["name"] == "helm-studio"
+
+
+def test_the_plugin_carries_only_the_shared_helm_url() -> None:
+    """The Helm URL is the same for everyone; the person logs in with a personal code.
+    A personal connector link (/c/cnx_…) or token must never ship in the plugin."""
+    text = (PLUGIN / ".mcp.json").read_text("utf-8")
+    servers = json.loads(text)["mcpServers"]
+    assert servers == {"helm": {"type": "http", "url": "https://helm.newton.hr/mcp"}}
+    assert not re.search(r"cnx_|cnu_|tok_|/c/", text)

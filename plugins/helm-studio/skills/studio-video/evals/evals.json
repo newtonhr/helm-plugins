@@ -4,14 +4,14 @@
     {
       "id": 1,
       "prompt": "Napravi mi Instagram reel za prsluk 71060.",
-      "expected_output": "Pita organsko ili plaćeno, ponudu i rok, kako se kupac javlja, tko je u kadru. Poziva studio_materijali. Predlaže 2-3 koncepta. Piše knjigu snimanja s kukom do 2 s, provjerava je sa studio_video_provjeri i popravlja. Pokazuje vremensku crtu i čeka „da” prije studio_video_izradi. Zatim studio_cekaj i ključni kadrovi.",
+      "expected_output": "Pita organsko ili plaćeno, koji osjećaj prodajemo, ponudu i rok, kako se kupac javlja. Predlaže 2-3 priče (npr. obitelj ulazi na brod i oblači prsluke). Piše likove i kadrove sa slika_opis, ai_opis i proizvod. Poziva studio_video_kadrovi, pokazuje slike, čeka odobrenje i šalje odobri. Zatim studio_video_provjeri, pokazuje vremensku crtu i AI sekunde, čeka „da” prije studio_video_izradi, pa studio_cekaj.",
       "assertions": [
-        "Pita prije izrade i čeka potvrdu",
+        "Video ima priču s ljudima i osjećajem, ne samo proizvod",
+        "Poziva studio_video_kadrovi i čeka odobrenje slika",
         "Poziva studio_video_provjeri prije studio_video_izradi",
-        "Prvi kadar traje najviše 2 s",
-        "Proizvod se vidi rano i barem dvaput",
-        "Kaže da glazbu dodaje u aplikaciji",
-        "Ne poziva studio_video_izradi bez potvrde"
+        "Ne poziva studio_video_izradi bez potvrde",
+        "Jedna varijanta, bez kuka A/B/C",
+        "Kaže da glazbu dodaje u aplikaciji"
       ],
       "files": []
     },
@@ -30,11 +30,12 @@
     },
     {
       "id": 3,
-      "prompt": "Može li AI napraviti video gdje se sidro okreće u moru?",
-      "expected_output": "Kaže da AI ne radi proizvod u videu. Predlaže pravu snimku mobitelom ili paralaksu iz prave fotografije. AI smije samo scenu mora bez proizvoda i bez ljudi, ako je uključen.",
+      "prompt": "Napravi video gdje VHF padne u more, upali se bljeskalica i čovjek ga izvadi sretan.",
+      "expected_output": "Prvo provjeri u trgovini pluta li taj VHF i ima li bljeskalicu. Ako nema, kaže da priča ne smije to pokazati i predlaže drugu. Ako ima, piše recept problem i spas s likovima i ključnim slikama, bez teksta i cijene u AI kadrovima.",
       "assertions": [
-        "Ne obećava AI video proizvoda",
-        "Predlaže snimanje mobitelom ili paralaksu iz fotografije"
+        "Provjerava svojstva proizvoda prije priče",
+        "Ne pokazuje svojstvo koje proizvod nema",
+        "AI kadrovi nemaju tekst, logo ni cijenu"
       ],
       "files": []
     }

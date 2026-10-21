@@ -1,5 +1,5 @@
 {
-  "izvor": "grgur/marina-ops-mcp@4bc7605",
+  "izvor": "grgur/marina-ops-mcp@8eb8db2",
   "teme": [
     "dizajn-reklame",
     "fotografija-proizvoda",
@@ -14,6 +14,7 @@
     "tekst-instagram",
     "tekst-linkedin",
     "tekst-tiktok",
+    "video-price",
     "video-redatelj",
     "video-scenarij",
     "video-usluge"
@@ -39,6 +40,7 @@
     "studio_status",
     "studio_stil",
     "studio_video_izradi",
+    "studio_video_kadrovi",
     "studio_video_provjeri",
     "studio_znanje"
   ],

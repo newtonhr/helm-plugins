@@ -22,7 +22,7 @@ Pitaj samo što ne znaš:
    Prednja strana uvijek gleda kameru. Najviše 2 pokreta.
 3. Okretanje, napuhavanje, kopčanje, sastavljanje i otvaranje traže pravu fotku tog
    stanja iz trgovine (`fotka`). `studio_provjera_fotki` pokaže koje fotke postoje.
-   Bez nje predloži pokret iz jedne fotke.
+   Bez nje predloži pokret iz jedne fotke. Za sada ti pokreti ne idu u video.
 4. `studio_tokeni`: reci osobi cijenu animacije u tokenima i koliko ostaje.
 5. **Pitaj osobu**: proizvod, pokret, format (kvadrat, feed, reel), pozadina.
 6. `studio_animacija(proizvod, pokret, …)`: Studio nacrta ključnu sliku. Pokaži je.

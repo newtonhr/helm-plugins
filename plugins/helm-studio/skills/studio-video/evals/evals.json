@@ -3,24 +3,38 @@
   "evals": [
     {
       "id": 1,
-      "prompt": "Napravi mi TikTok video za sidro 501802.",
-      "expected_output": "Kaže odmah da Studio ne radi video. Daje scenarij s kukom u tri dijela (slika, izgovoreno, natpis), kadrove s trajanjem i natpisima, popis što snimiti mobitelom, i nudi slike 9:16 preko studio-reklama.",
+      "prompt": "Napravi mi Instagram reel za prsluk 71060.",
+      "expected_output": "Pita organsko ili plaćeno, ponudu i rok, kako se kupac javlja, tko je u kadru. Poziva studio_materijali. Predlaže 2-3 koncepta. Piše knjigu snimanja s kukom do 2 s, provjerava je sa studio_video_provjeri i popravlja. Pokazuje vremensku crtu i čeka „da” prije studio_video_izradi. Zatim studio_cekaj i ključni kadrovi.",
       "assertions": [
-        "Kaže da Studio ne radi video",
-        "Kuka ima tri dijela koji se ne ponavljaju",
-        "Svaka važna rečenica je i natpis",
-        "Daje popis kadrova za mobitel",
-        "Ne obećava AI video"
+        "Pita prije izrade i čeka potvrdu",
+        "Poziva studio_video_provjeri prije studio_video_izradi",
+        "Prvi kadar traje najviše 2 s",
+        "Proizvod se vidi rano i barem dvaput",
+        "Kaže da glazbu dodaje u aplikaciji",
+        "Ne poziva studio_video_izradi bez potvrde"
       ],
       "files": []
     },
     {
       "id": 2,
-      "prompt": "Možeš li napraviti video gdje se sidro okreće u moru?",
-      "expected_output": "Kaže da AI ne crta proizvod i da se proizvod u pokretu snima; predloži kako to snimiti.",
+      "prompt": "Imam salon za lasersku depilaciju. Poslat ću 5 slika salona i jedan kratki video tretmana. Napravi reel.",
+      "expected_output": "Čita video-usluge. Pita je li tvrtka obrt ili zdravstvena ustanova i imaju li osobe u kadru pisani pristanak. Ne koristi AI za kožu ni ljude. Izbjegava obećanja (trajno, bezbolno). Daje popis snimanja jer ima manje od 3 klipa. Predlaže recept usluge od oko 15 s s pozivom na rezervaciju.",
+      "assertions": [
+        "Pita za pristanak osoba u kadru",
+        "Pita obrt ili zdravstvena ustanova",
+        "Nema AI kadra s ljudima ili kožom",
+        "Nema obećanja trajno ili bezbolno",
+        "Daje popis snimanja"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Može li AI napraviti video gdje se sidro okreće u moru?",
+      "expected_output": "Kaže da AI ne radi proizvod u videu. Predlaže pravu snimku mobitelom ili paralaksu iz prave fotografije. AI smije samo scenu mora bez proizvoda i bez ljudi, ako je uključen.",
       "assertions": [
         "Ne obećava AI video proizvoda",
-        "Predlaže snimanje mobitelom"
+        "Predlaže snimanje mobitelom ili paralaksu iz fotografije"
       ],
       "files": []
     }

@@ -13,7 +13,7 @@ bolja pitanja.
 | `studio-reklama` | reklamne slike: pristupi, provjera teksta, 4 ponude, odabir | ad-creative |
 | `studio-oglasi` | plan kampanje na Meti/Googleu i tjedna provjera brojeva | ads |
 | `studio-objave` | stupovi sadržaja, kalendar, tekst po mreži, vrtuljak | social |
-| `studio-video` | scenarij i kadrovi; Studio ne radi video | video |
+| `studio-video` | kratki video iz pravih fotografija i klipova: knjiga snimanja, provjera, montaža | video |
 
 Svaki skill ima `evals/evals.json`: upit, očekivani tok i provjere. Evals pokreću
 Claudea i troše Claude tokene; pokreću se ručno. U evalsima `studio_izradi` se ne smije
@@ -21,9 +21,10 @@ stvarno pozvati.
 
 Pravila koja vrijede uvijek:
 
-- AI nikad ne crta proizvod, tekst, logo ni cijenu.
+- AI nikad ne crta proizvod, tekst, logo ni cijenu. U videu AI smije samo scenu bez ljudi i
+  proizvoda, kad ga vlasnik uključi.
 - Brand paket klijenta ima prednost pred vodičem; zakonska pravila vrijede uvijek.
-- Prije `studio_izradi` (troši AI) Claude pita osobu.
+- Prije `studio_izradi` i `studio_video_izradi` Claude pita osobu.
 - Studio ništa ne objavljuje. Objavu radi čovjek.
 
 Plugin ne nosi URL konektora. Helm konektor je osobna vjerodajnica i dodaje se zasebno.

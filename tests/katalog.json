@@ -1,5 +1,5 @@
 {
-  "izvor": "grgur/marina-ops-mcp@077df8f",
+  "izvor": "grgur/marina-ops-mcp@4bc7605",
   "teme": [
     "dizajn-reklame",
     "fotografija-proizvoda",
@@ -14,7 +14,9 @@
     "tekst-instagram",
     "tekst-linkedin",
     "tekst-tiktok",
-    "video-scenarij"
+    "video-redatelj",
+    "video-scenarij",
+    "video-usluge"
   ],
   "alati": [
     "studio_brand",
@@ -22,14 +24,22 @@
     "studio_galerija",
     "studio_ispravi",
     "studio_izradi",
+    "studio_kampanja",
+    "studio_logo",
+    "studio_logo_link",
+    "studio_materijali",
     "studio_odaberi",
+    "studio_pitaj",
     "studio_potrosnja",
     "studio_pozadina_ukloni",
     "studio_pozadine",
     "studio_pozadine_link",
+    "studio_provjera_fotki",
     "studio_provjeri_tekst",
     "studio_status",
     "studio_stil",
+    "studio_video_izradi",
+    "studio_video_provjeri",
     "studio_znanje"
   ],
   "na_cekanju": {}

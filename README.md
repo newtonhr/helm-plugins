@@ -6,6 +6,7 @@ Server Helm je u zasebnom repou; ovdje su samo pluginovi.
 | Plugin | Što radi |
 |---|---|
 | [`helm-studio`](plugins/helm-studio/) | Reklame, objave, newsletter i kampanje za webshop klijenta preko Helm Studija (`studio_*` alati). |
+| [`marina-zahtjev`](plugins/marina-zahtjev/) | Samo za Marina Stores: vođeni razgovor koji želju ili kvar pretvara u zahtjev za Newton, uz dokaze iz Helma. |
 
 Instalacija u Claude Code: `/plugin marketplace add grgur/helm-plugins`, zatim
 `/plugin install helm-studio@helm-plugins`. Plugin ne nosi URL konektora; konektor

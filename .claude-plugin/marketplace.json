@@ -8,6 +8,11 @@
       "name": "helm-studio",
       "source": "./plugins/helm-studio",
       "description": "Helm Studio: reklamne slike, kratki video, objave, newsletter i kampanje za webshop klijenta preko Helma."
+    },
+    {
+      "name": "marina-zahtjev",
+      "source": "./plugins/marina-zahtjev",
+      "description": "Marina Stores: vođeni razgovor koji ideju ili problem na web shopu, skladištu ili blagajni pretvara u jasan zahtjev za Newton, s dokazima iz Helma."
     }
   ]
 }

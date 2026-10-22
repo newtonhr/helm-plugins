@@ -28,7 +28,8 @@ ga omogućuje. AI ne crta tekst, logo ni cijenu; to dodaje montaža.
 2. Predloži 2–3 priče u dvije rečenice. Osoba bira. Priča bira mjesto: gdje korist
    proizvoda najviše vrijedi.
 3. Napiši knjigu snimanja po vodiču `video-svijet`: prvo `svijet` (mjesto, tlocrt,
-   uvjeti, likovi, rekviziti, `proizvod_moze`), pa kadrovi s planom, kutom i tonom.
+   uvjeti, likovi, `polozaji`, rekviziti, `proizvod_moze`), pa kadrovi s planom, kutom
+   i tonom. Ništa ne nestaje: što je na početku kadra, ima i kraj ili `stanje`.
    Zatim natpisi, kraj, tekst objave, 3–5 hashtagova, naslovnica. Jedna varijanta.
    Koristi sve fotografije proizvoda (`fotografije_proizvoda` iz `studio_video_provjeri`).
 4. `studio_video_kadrovi(knjiga)`: matična slika, ključne slike i setovi.

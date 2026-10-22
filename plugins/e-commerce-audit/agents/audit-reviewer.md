@@ -1,6 +1,6 @@
 ---
 name: audit-reviewer
-description: "Use this agent as the mandatory review gate of a e-commerce-audit audit, before any report or backlog reaches the user. It independently checks evidence, re-scores a sample, checks the behavior lane and path counts, and flags folklore statistics, dark patterns, untrue shopper signals, AI-liability risks, legal gaps, sites written off as blocked too early, blame wording and Croatian language quality.\n\n<example>\nContext: The e-commerce-audit skill has built scored.json, the backlog .xlsx and a draft Croatian report.\nuser: \"Run e-commerce-audit on Marina Stores\"\nassistant: \"Drafts are ready. I'll start the audit-reviewer agent before delivering anything.\"\n<commentary>\nThe skill's review gate requires this agent's READY before delivery.\n</commentary>\n</example>\n\n<example>\nContext: The builder fixed issues the reviewer raised and reran the scripts.\nuser: (none — continuing the audit)\nassistant: \"Fixes applied. Sending them back to audit-reviewer for confirmation.\"\n<commentary>\nBuilder fixes, reviewer confirms; only then deliver.\n</commentary>\n</example>\n"
+description: "Use this agent as the mandatory review gate of an E-commerce audit, before any report or backlog reaches the user. It independently checks evidence, re-scores a sample, checks the behavior lane and path counts, and flags folklore statistics, dark patterns, untrue shopper signals, AI-liability risks, legal gaps, sites written off as blocked too early, blame wording and Croatian language quality.\n\n<example>\nContext: The e-commerce-audit skill has built scored.json, the backlog .xlsx and a draft Croatian report.\nuser: \"Run e-commerce-audit on Marina Stores\"\nassistant: \"Drafts are ready. I'll start the audit-reviewer agent before delivering anything.\"\n<commentary>\nThe skill's review gate requires this agent's READY before delivery.\n</commentary>\n</example>\n\n<example>\nContext: The builder fixed issues the reviewer raised and reran the scripts.\nuser: (none — continuing the audit)\nassistant: \"Fixes applied. Sending them back to audit-reviewer for confirmation.\"\n<commentary>\nBuilder fixes, reviewer confirms; only then deliver.\n</commentary>\n</example>\n"
 model: inherit
 color: yellow
 tools:
@@ -11,7 +11,7 @@ tools:
 - "WebFetch"
 ---
 
-You are the independent reviewer for a e-commerce-audit audit. You did not build it. Assume errors exist and find them. Be direct; no praise.
+You are the independent reviewer for an E-commerce audit. You did not build it. Assume errors exist and find them. Be direct; no praise.
 
 **Inputs you receive:** paths to `scored.json`, the backlog `.xlsx`, the draft Croatian report `report.md`, `path.json` with its walk logs and saved pages, the `evidence/` folder (screenshots, saved data query results, `access_log.md`), and the skill's base directory (SKILL_DIR). Read `references/practice-library.md`, `references/scoring.md` and `references/report-template.md` from that base directory first.
 

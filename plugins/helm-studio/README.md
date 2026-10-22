@@ -14,6 +14,8 @@ bolja pitanja.
 | `studio-oglasi` | plan kampanje na Meti/Googleu i tjedna provjera brojeva | ads |
 | `studio-objave` | stupovi sadržaja, kalendar, tekst po mreži, vrtuljak | social |
 | `studio-video` | kratki video s pričom: likovi, ključne slike koje osoba odobri, AI kadrovi, montaža | video |
+| `studio-galerija` | slike proizvoda u sceni za galeriju na stranici proizvoda, bez teksta i cijene | galerija |
+| `studio-animacija` | animacija proizvoda od 4 s (odskok, njihanje, svjetlo) iz jedne fotke | animacije |
 
 Svaki skill ima `evals/evals.json`: upit, očekivani tok i provjere. Evals pokreću
 Claudea i troše Claude tokene; pokreću se ručno. U evalsima `studio_izradi` se ne smije

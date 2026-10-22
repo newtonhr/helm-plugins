@@ -1,8 +1,10 @@
 {
-  "izvor": "grgur/marina-ops-mcp@8eb8db2",
+  "izvor": "grgur/marina-ops-mcp@9fc7275",
   "teme": [
+    "animacije",
     "dizajn-reklame",
     "fotografija-proizvoda",
+    "galerija",
     "kampanja",
     "kuka-i-poruka",
     "nauticko-trziste-hr",
@@ -17,9 +19,11 @@
     "video-price",
     "video-redatelj",
     "video-scenarij",
+    "video-svijet",
     "video-usluge"
   ],
   "alati": [
+    "studio_animacija",
     "studio_brand",
     "studio_cekaj",
     "studio_galerija",
@@ -39,6 +43,7 @@
     "studio_provjeri_tekst",
     "studio_status",
     "studio_stil",
+    "studio_tokeni",
     "studio_video_izradi",
     "studio_video_kadrovi",
     "studio_video_provjeri",

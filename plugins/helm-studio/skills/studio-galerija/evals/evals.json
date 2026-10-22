@@ -1,0 +1,29 @@
+{
+  "skill_name": "studio-galerija",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Trebam slike prsluka 505803 u upotrebi za stranicu proizvoda.",
+      "expected_output": "Čita studio_znanje(\"galerija\"), provjerava fotke sa studio_provjera_fotki, predlaže kadrove (u_upotrebi, na_mjestu, mjerilo) i jedno mjesto za sve. Kaže cijenu u tokenima iz studio_tokeni. Čeka potvrdu, zatim studio_izradi s vrsta=\"galerija\" i studio_cekaj. Traži usporedbu s pravom fotkom i opis „Ilustracija u upotrebi”.",
+      "assertions": [
+        "Poziva studio_izradi s vrsta galerija tek nakon potvrde",
+        "Kaže cijenu u tokenima prije izrade",
+        "Nema teksta, cijene ni loga na slikama",
+        "Traži usporedbu AI proizvoda s pravom fotkom",
+        "Isto mjesto za sve slike proizvoda"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Dodaj i sliku detalja kopče za proizvod koji ima samo jednu fotku u shopu.",
+      "expected_output": "Objašnjava da detalj ide samo iz prave fotke iz trgovine i da proizvod ima jednu fotku. Ne traži od AI-ja da nacrta detalj. Predlaže kadar mjerilo ili da shop učita fotku detalja.",
+      "assertions": [
+        "Ne crta detalj AI-jem",
+        "Kaže da treba prava fotka detalja",
+        "Predlaže drugi kadar"
+      ],
+      "files": []
+    }
+  ]
+}

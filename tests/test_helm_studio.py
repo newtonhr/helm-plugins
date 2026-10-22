@@ -20,7 +20,8 @@ TOPICS = set(KATALOG["teme"]) | set(KATALOG["na_cekanju"])
 TOOLS = set(KATALOG["alati"])
 MCP_PROMPTS = {"kampanja", "objave-za-tjedan", "reklama-za-proizvod"}
 EXPECTED = {"helm-studio", "studio-brand", "studio-reklama", "studio-oglasi",
-            "studio-objave", "studio-video", "studio-prvi-koraci"}
+            "studio-objave", "studio-video", "studio-prvi-koraci", "studio-galerija",
+            "studio-animacija"}
 
 
 def _skill(name: str) -> tuple[dict[str, str], str]:
@@ -123,3 +124,26 @@ def test_the_plugin_carries_only_the_shared_helm_url() -> None:
     servers = json.loads(text)["mcpServers"]
     assert servers == {"helm": {"type": "http", "url": "https://helm.newton.hr/mcp"}}
     assert not re.search(r"cnx_|cnu_|tok_|/c/", text)
+
+
+def test_the_gallery_skill_prices_asks_then_makes_without_text() -> None:
+    _, body = _skill("studio-galerija")
+    price = body.index("studio_tokeni")
+    ask = body.index("**Pitaj osobu**")
+    make = body.index('studio_izradi(proizvodi, vrsta="galerija"')
+    wait = body.index("studio_cekaj(posao)")
+    assert price < ask < make < wait
+    assert "Nema teksta, cijene ni loga" in body
+    assert "Ilustracija u upotrebi" in body
+
+
+def test_the_animation_skill_shows_the_key_frame_before_it_spends() -> None:
+    _, body = _skill("studio-animacija")
+    price = body.index("studio_tokeni")
+    ask = body.index("**Pitaj osobu**")
+    draw = body.index("studio_animacija(proizvod")
+    approve = body.index("odobri=[kf_")
+    wait = body.index("studio_cekaj(posao)")
+    assert price < ask < draw < approve < wait
+    assert "Čekaj „da”" in body
+    assert "prave fotke" in body or "pravu fotku" in body

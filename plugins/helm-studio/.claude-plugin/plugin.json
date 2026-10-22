@@ -1,7 +1,7 @@
 {
   "name": "helm-studio",
-  "version": "0.6.3",
-  "description": "Helm Studio: reklame, oglasi, objave, kratki video s pričom (AI kadrovi iz odobrenih ključnih slika) i prvi koraci za webshop klijenta. Skillovi vode posao; znanje struke dolazi iz Helma (studio_znanje).",
+  "version": "0.8.0",
+  "description": "Helm Studio: reklame, oglasi, objave, kratki video s pričom, slike proizvoda za galeriju, animacije proizvoda i prvi koraci za webshop klijenta. Cijena u setovima i tokenima paketa. Skillovi vode posao; znanje struke dolazi iz Helma (studio_znanje).",
   "author": {
     "name": "Newton d.o.o."
   },

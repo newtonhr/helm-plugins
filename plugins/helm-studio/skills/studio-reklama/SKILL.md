@@ -27,7 +27,8 @@ Pitaj samo što ne znaš:
 4. `studio_provjeri_tekst(proizvodi, pristupi=…)`. Popravi sve što kaže `popravak`, dok
    nije `ok: true`. Upozorenja reci osobi.
 5. **Pitaj osobu** u jednoj poruci, s prijedlogom za svako: poruka, formati, a za
-   proizvod s pravim popustom prikaz u € ili %. Izrada počinje tek kad potvrde.
+   proizvod s pravim popustom prikaz u € ili %. Reci cijenu: jedan set po proizvodu, a
+   kad setova nema, tokeni (`studio_tokeni`). Izrada počinje tek kad potvrde.
 6. `studio_izradi(…, pristupi=…)`, pa `studio_cekaj(posao)` dok ne kaže gotovo. Pokaži
    sliku.
 7. Ako `studio_brand` ima `ponude`: Studio prvo da do 4 male ponude. Pitaj koju žele
@@ -53,7 +54,7 @@ Kad osoba zalijepi brojeve po oglasu (prikazi, klikovi, kupnje):
 
 - AI ne crta proizvod, tekst, logo ni cijenu.
 - Nema izmišljenih brojeva, normi, recenzija ni popusta.
-- Ne spominji trošak ni kredite AI-ja.
+- Ne spominji AI kredite ni naš trošak u eurima.
 - Studio ne objavljuje.
 
 ## Dalje

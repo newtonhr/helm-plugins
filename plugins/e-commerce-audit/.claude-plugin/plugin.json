@@ -1,9 +1,18 @@
 {
   "name": "e-commerce-audit",
-  "version": "0.3.1",
+  "displayName": "E-commerce audit",
+  "version": "0.3.2",
   "description": "E-commerce audit: checks a web shop against proven practices from large e-tailers and produces a Croatian report plus an .xlsx backlog ranked by impact and effort, scored by scripts and checked by a review agent. Read-only on the shop. Formerly webshop-admin.",
   "author": {
     "name": "Newton d.o.o."
   },
-  "keywords": ["helm", "e-commerce", "audit", "webshop", "prestashop", "backlog"]
+  "keywords": [
+    "helm",
+    "e-commerce",
+    "audit",
+    "webshop",
+    "prestashop",
+    "backlog"
+  ],
+  "icon": "./icon.png"
 }

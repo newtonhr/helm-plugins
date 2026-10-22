@@ -2,7 +2,7 @@
 name: e-commerce-audit
 description: "This skill should be used only when the user invokes \"E-commerce audit\", \"e-commerce-audit\" or \"/e-commerce-audit\" by name (formerly webshop-admin), to audit a web shop against proven practices from large e-tailers and produce a Croatian client report plus an .xlsx Newton backlog prioritized by impact × effort. Do not trigger on general e-commerce questions.\n"
 metadata:
-  version: "0.3.1"
+  version: "0.3.2"
 ---
 
 # E-commerce audit

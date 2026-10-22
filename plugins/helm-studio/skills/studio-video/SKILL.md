@@ -10,7 +10,8 @@ ga omogućuje. AI ne crta tekst, logo ni cijenu; to dodaje montaža.
 
 ## Prije početka
 
-1. `studio_brand`, zatim `studio_znanje("video-redatelj")` i `studio_znanje("video-price")`.
+1. `studio_brand`, zatim `studio_znanje("video-redatelj")`, `studio_znanje("video-price")`
+   i `studio_znanje("video-svijet")`.
    Za uslugu (salon, servis) i `studio_znanje("video-usluge")`.
 2. Pitaj osobu, s prijedlogom za svako:
    - organsko ili plaćeno, i koja mreža;
@@ -18,25 +19,22 @@ ga omogućuje. AI ne crta tekst, logo ni cijenu; to dodaje montaža.
    - što nudimo i do kada vrijedi;
    - kako se kupac javlja (poveznica, poruka, telefon, rezervacija);
    - za pravog čovjeka u kadru: ima li pisani pristanak.
-3. Provjeri u trgovini što proizvod stvarno može. Priča smije pokazati samo to.
+3. Provjeri u trgovini što proizvod stvarno može. Priča smije pokazati samo to
+   (`svijet.proizvod_moze`; Studio to traži u opisu trgovine).
 
 ## Koraci
 
 1. Napiši osjećaj u jednoj rečenici, jednu poruku i jedan poziv.
-2. Predloži 2–3 priče u dvije rečenice. Osoba bira.
-3. Napiši knjigu snimanja: `likovi`, `mjesto` (brod: vrsta, boje, paluba), kadrovi
-   (`slika_opis`, `slika_kraj` gdje radnja završi, `ai_opis`, `proizvod`),
-   natpisi, kraj, tekst objave, 3–5 hashtagova, naslovnica. Jedna varijanta.
-   Nezgoda ima vidljiv uzrok (val, mokra ruka), a lice nosi emociju u krupnom planu.
-   Kadar proizvoda ima `scena` (prazan set), a ne golu fotografiju iz kataloga.
-   Koristi sve fotografije proizvoda: `studio_video_provjeri` vraća
-   `fotografije_proizvoda`; `proizvod:<id>/2` je drugi kut ili oprema iz kutije.
-   Radnja kroz dva kadra ide s `nastavak: true` (počinje na `slika_kraj` prethodnog).
-   Inače rez; `zatamnjenje` za skok u vremenu, `bljesak` za udarac, najviše jedan
-   prijelaz na tri kadra.
-4. `studio_video_kadrovi(knjiga)`: ključne slike i setovi. Ponavljaj dok ne kaže `gotovo`.
-   Pokaži slike osobi redom, kao strip. Sam prvo usporedi: isti brod, ista odjeća,
-   proizvod kao na fotografiji. Prva slika je sidro: nju popravi prvu.
+2. Predloži 2–3 priče u dvije rečenice. Osoba bira. Priča bira mjesto: gdje korist
+   proizvoda najviše vrijedi.
+3. Napiši knjigu snimanja po vodiču `video-svijet`: prvo `svijet` (mjesto, tlocrt,
+   uvjeti, likovi, rekviziti, `proizvod_moze`), pa kadrovi s planom, kutom i tonom.
+   Zatim natpisi, kraj, tekst objave, 3–5 hashtagova, naslovnica. Jedna varijanta.
+   Koristi sve fotografije proizvoda (`fotografije_proizvoda` iz `studio_video_provjeri`).
+4. `studio_video_kadrovi(knjiga)`: matična slika, ključne slike i setovi.
+   Ponavljaj dok ne kaže `gotovo`. Matičnu sliku pokaži i popravi prvu, jer se sve
+   ostale crtaju iz nje. Zatim slike redom, kao strip. Gdje piše `skripta`, reci osobi
+   što je provjera našla.
 5. Kad osoba kaže da: `studio_video_kadrovi(knjiga, odobri=[kf_…])`.
 6. `studio_video_provjeri(knjiga)` (besplatno). Popravi što kaže. Ponovi dok nije `ok`.
 7. **Pitaj osobu**: pokaži vremensku crtu, natpise i tokene novih AI sekundi
@@ -52,6 +50,7 @@ ponovo. `studio_ispravi` ne radi za video.
 
 - AI ne crta tekst, logo ni cijenu.
 - Proizvod ne radi ništa što stvarno ne može.
+- Nitko u priči ne radi ništa nesigurno.
 - Nitko ništa ne baca. U opisu nema „baci”, „ispusti” ni „ispadne”, nego uzrok pa klizanje.
 - Nema izmišljenih brojeva, recenzija ni obećanja (trajno, bezbolno, zajamčeno).
 - Za usluge nema AI kože, rezultata tretmana ni prije/poslije.

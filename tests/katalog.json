@@ -1,5 +1,5 @@
 {
-  "izvor": "grgur/marina-ops-mcp@9e424a6",
+  "izvor": "grgur/marina-ops-mcp@1a5a5dc",
   "teme": [
     "animacije",
     "dizajn-reklame",
@@ -19,6 +19,7 @@
     "video-price",
     "video-redatelj",
     "video-scenarij",
+    "video-svijet",
     "video-usluge"
   ],
   "alati": [

@@ -1,6 +1,7 @@
 {
   "name": "helm-studio",
-  "version": "0.9.2",
+  "displayName": "Helm Studio",
+  "version": "0.9.3",
   "description": "Helm Studio: reklame, oglasi, objave, kratki video s pričom, slike proizvoda za galeriju, animacije proizvoda i prvi koraci za webshop klijenta. Cijena u setovima i tokenima paketa. Nosi Helm konektor (prijava osobnim kodom). Skillovi vode posao; znanje struke dolazi iz Helma (studio_znanje).",
   "author": {
     "name": "Newton d.o.o."
@@ -13,5 +14,6 @@
     "oglasi",
     "video",
     "webshop"
-  ]
+  ],
+  "icon": "./icon.png"
 }

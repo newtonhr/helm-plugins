@@ -1,6 +1,7 @@
 {
   "name": "marina-zahtjev",
-  "version": "0.2.1",
+  "displayName": "Marina zahtjev",
+  "version": "0.2.2",
   "description": "Marina Stores: vođeni razgovor koji ideju za promjenu na web shopu pretvara u jasan zahtjev za Newton, s dokazima koje Helm sam prikupi iz shopa, skladišta i blagajne.",
   "author": {
     "name": "Newton d.o.o."
@@ -11,5 +12,6 @@
     "zahtjev",
     "projektni-zadatak",
     "webshop"
-  ]
+  ],
+  "icon": "./icon.png"
 }

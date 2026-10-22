@@ -93,10 +93,13 @@ Svaki skill ima isti kostur, najviše ~80 redaka:
    izmišljenih brojeva, recenzija ni popusta; nema AI troška u tekstu za klijenta.
 5. **Dalje** — koji skill slijedi.
 
-**Bez komandi, agenata, hookova i `.mcp.json`.**
+**Bez komandi, agenata i hookova.** `.mcp.json` nosi samo zajedničku Helm adresu (od 0.7.0).
 - Komande: MCP promptovi (`kampanja`, `objave-za-tjedan`, `reklama-za-proizvod`) već su u
   izborniku [O]; skillovi se i sami pozivaju preko „/”.
-- `.mcp.json`: URL konektora je osobna vjerodajnica. Ne smije u plugin (CLAUDE.md).
+- `.mcp.json`: do 21. 10. URL konektora bio je osobna vjerodajnica (`/c/cnx_…`). Od prijave
+  osobnim kodom adresa je ista za sve i nije tajna (marina-ops-mcp `systemd/README.md` §8a).
+  **Odlučeno 21. 10. ("idemo"):** plugin nosi `https://helm.newton.hr/mcp` [O: 401 + OAuth
+  metadata; stara `/helm/mcp` adresa vraća 404]. Ni jedna datoteka ne nosi `cnx_`, `cnu_`, `tok_` ni `/c/`.
 - Agent „kritičar oglasa”: provjeru već radi server (`studio_provjeri_tekst`) [O].
   Agent bi bio druga, neusklađena provjera.
 
@@ -141,7 +144,7 @@ Popis tema i alata dolazi iz `marina-ops-mcp`: taj repo izvozi `studio-katalog.j
 Ako se katalog promijeni, test u `helm-plugins` pada dok se skill ne uskladi.
 - Svaka tema `studio_znanje("…")` u skillu postoji kao vodič.
 - Svaki alat `studio_*` u skillu postoji u `tools/studio.py`.
-- Nijedna datoteka nema URL konektora, `cnu_`, `tok_` ni ime klijenta.
+- Nijedna datoteka nema osobni kod (`cnx_`, `cnu_`, `tok_`, `/c/`) ni ime klijenta; `.mcp.json` ima samo zajedničku Helm adresu.
 - Opis skilla je kraći od 1024 znaka i ima prefiks `studio-` u imenu.
 
 **Evals po skillu** (`evals/evals.json`, upstream oblik [O]): upit, očekivanje, provjere.

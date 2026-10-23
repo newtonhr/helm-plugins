@@ -38,8 +38,14 @@ Pitaj samo što ne znaš:
 8. `studio_status` za rezultat provjera svake slike. Na kraju poveznicu iz
    `studio_galerija` daj osobi koja je tražila.
 
-Ispravak jedne slike: `studio_ispravi` (najviše 3 po slici). Prvo predloži fotku iz
-banke (`studio_pozadine`), jer ne treba AI. Za novu AI scenu pitaj osobu.
+Ispravak jedne slike: `studio_ispravi`. Prvih 5 ispravaka je besplatno, svaki sljedeći
+košta kao nova slika (najviše 10). Prije plaćenog ispravka reci cijenu i čekaj „da”.
+Stare verzije ostaju: `studio_cekaj` ih daje u `starije_verzije`, galerija ih pokazuje.
+Prvo predloži fotku iz banke (`studio_pozadine`), jer ne treba AI. Za novu AI scenu
+pitaj osobu.
+Komentar mijenja samo scenu, nikad proizvod. Kad osoba traži proizvod u upotrebi
+(„stavi gumenjak na more”, „neka ga netko drži”), pošalji i `nacin="u_upotrebi"`: tada
+AI crta i proizvod. Reci osobi da ga usporedi s pravom fotografijom.
 
 ## Iz rezultata
 

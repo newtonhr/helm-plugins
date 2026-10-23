@@ -40,6 +40,9 @@ Pitaj samo što ne znaš:
 
 Ispravak jedne slike: `studio_ispravi` (najviše 3 po slici). Prvo predloži fotku iz
 banke (`studio_pozadine`), jer ne treba AI. Za novu AI scenu pitaj osobu.
+Komentar mijenja samo scenu, nikad proizvod. Kad osoba traži proizvod u upotrebi
+(„stavi gumenjak na more”, „neka ga netko drži”), pošalji i `nacin="u_upotrebi"`: tada
+AI crta i proizvod. Reci osobi da ga usporedi s pravom fotografijom.
 
 ## Iz rezultata
 

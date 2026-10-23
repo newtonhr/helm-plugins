@@ -7,6 +7,7 @@ Server Helm je u zasebnom repou; ovdje su samo pluginovi.
 |---|---|
 | [`helm-studio`](plugins/helm-studio/) | Reklame, objave, newsletter i kampanje za webshop klijenta preko Helm Studija (`studio_*` alati). |
 | [`marina-zahtjev`](plugins/marina-zahtjev/) | Samo za Marina Stores: vođeni razgovor koji želju ili kvar pretvara u zahtjev za Newton, uz dokaze iz Helma. |
+| [`helm-katalog`](plugins/helm-katalog/) | Samo za Marina Stores: uređivanje kataloga kroz Helm — proizvod se sređuje u jednom prolazu i odobrava jednom; novi artikli iz cjenika, spajanje POS šifri, akcije, što nedostaje. |
 | [`e-commerce-audit`](plugins/e-commerce-audit/) | E-commerce audit: provjera web shopa prema dokazanim praksama velikih trgovaca, izvještaj na hrvatskom i .xlsx popis poslova po učinku i trudu. Samo čita. |
 
 Instalacija, tako da nove verzije stižu same:

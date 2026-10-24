@@ -50,6 +50,7 @@ ponovo. `studio_ispravi` ne radi za video.
 ## Nikad
 
 - AI ne crta tekst, logo ni cijenu.
+- Video s AI kadrovima ne objavljuj bez AI oznake (TikTok AIGC).
 - Proizvod ne radi ništa što stvarno ne može.
 - Nitko u priči ne radi ništa nesigurno.
 - Nitko ništa ne baca. U opisu nema „baci”, „ispusti” ni „ispadne”, nego uzrok pa klizanje.

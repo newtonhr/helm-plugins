@@ -28,7 +28,8 @@ Pitaj samo što ne znaš:
 5. **Pitaj osobu**: proizvodi, kadrovi, mjesto. Izrada počinje tek kad potvrde.
 6. `studio_izradi(proizvodi, vrsta="galerija", kadrovi=…, motiv=…)`, pa
    `studio_cekaj(posao)` dok ne kaže gotovo. Pokaži slike.
-7. Recite osobi da svaku AI sliku usporedi s pravom fotkom: boja, natpis, dijelovi.
+7. Recite osobi da svaku AI sliku usporedi s pravom fotkom po popisu iz provjere
+   `proizvod_ai`: oblik, boja, logo, natpis, dijelovi, veličina, ruke.
    Slika ne smije pokazati ono što proizvod nema.
 8. Poveznicu iz `studio_galerija` daj osobi. Svaka AI slika u shopu dobije opis
    „Ilustracija u upotrebi”. Naslovna slika proizvoda ostaje prava fotka.

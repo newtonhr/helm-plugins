@@ -36,7 +36,7 @@ Pitaj samo što ne znaš:
    što će se napraviti i čekaj „da”. Zatim `studio_odaberi` i `studio_cekaj`.
    Ako nema `ponude`, nema odabira.
 8. `studio_status` za rezultat provjera svake slike. Na kraju poveznicu iz
-   `studio_galerija` daj osobi koja je tražila.
+   `studio_galerija` daj osobi koja je tražila. Podsjeti je na AI oznaku pri objavi.
 
 Ispravak jedne slike: `studio_ispravi`. Prvih 5 ispravaka je besplatno, svaki sljedeći
 košta kao nova slika (najviše 10). Prije plaćenog ispravka reci cijenu i čekaj „da”.
@@ -45,7 +45,8 @@ Prvo predloži fotku iz banke (`studio_pozadine`), jer ne treba AI. Za novu AI s
 pitaj osobu.
 Komentar mijenja samo scenu, nikad proizvod. Kad osoba traži proizvod u upotrebi
 („stavi gumenjak na more”, „neka ga netko drži”), pošalji i `nacin="u_upotrebi"`: tada
-AI crta i proizvod. Reci osobi da ga usporedi s pravom fotografijom.
+AI crta i proizvod. Reci osobi da ga usporedi s pravom fotografijom po popisu iz
+`popravak` provjere `proizvod_ai`.
 
 ## Iz rezultata
 
@@ -58,7 +59,7 @@ Kad osoba zalijepi brojeve po oglasu (prikazi, klikovi, kupnje):
 
 ## Nikad
 
-- AI ne crta proizvod, tekst, logo ni cijenu.
+- AI ne crta tekst, logo ni cijenu. Proizvod crta samo `u_upotrebi`.
 - Nema izmišljenih brojeva, normi, recenzija ni popusta.
 - Ne spominji AI kredite ni naš trošak u eurima.
 - Studio ne objavljuje.

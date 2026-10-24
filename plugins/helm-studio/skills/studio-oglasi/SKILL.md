@@ -25,7 +25,8 @@ Oglase u Meti ili Googleu postavlja čovjek.
 4. Za svaki oglas napiši što očekuješ, tako da se može provjeriti: mjera, usporedba,
    smjer.
 5. Stranica na koju oglas vodi ponavlja obećanje iz oglasa.
-6. Kreative predaj skillu `studio-reklama`.
+6. Kreative predaj skillu `studio-reklama`. Oglas s AI slikom ili videom označi kao AI
+   sadržaj, po odjeljku 4 iz `pravila-oglasavanja` (Meta, TikTok AIGC).
 
 ## Tjedna provjera
 

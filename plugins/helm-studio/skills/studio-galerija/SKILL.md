@@ -21,8 +21,10 @@ Pitaj samo što ne znaš:
 2. `studio_provjera_fotki(proizvodi)`: koliko pravih fotki proizvod ima. Kadar detalj
    ide samo iz prave fotke iz trgovine.
 3. Predloži kadrove, 1–4 po proizvodu: u_upotrebi (osoba koristi proizvod), na_mjestu
-   (proizvod gdje živi, bez ljudi), mjerilo (u ruci, prava veličina), detalj (prava
-   fotka). Odrasla veličina ide s odraslim modelom.
+   (proizvod gdje živi, bez ljudi), mjerilo (u ruci, prava veličina), original (prava
+   fotka proizvoda na AI sceni, točna do piksela, bez ruke), detalj (prava fotka).
+   AI kadrovi daju osjećaj; original daje točnost (boje, tehnički detalji). Original
+   stavi prvi. Odrasla veličina ide s odraslim modelom.
 4. `studio_tokeni`: reci osobi cijenu u tokenima (svaka AI slika, detalj je besplatan)
    i koliko ostaje.
 5. **Pitaj osobu**: proizvodi, kadrovi, mjesto. Izrada počinje tek kad potvrde.

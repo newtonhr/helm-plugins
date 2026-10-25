@@ -21,5 +21,12 @@ Talk to the person in Croatian, formal "Vi".
 5. Report applied / refused. The shop caps discounts (default 70 %) and refuses price
    rises and exact duplicates — explain a refusal in one sentence.
 
+**Slow stock: offer a pairing next to the discount.** When the products come from
+`pos_dead_stock` or the person wants to "move" stock, offer one alternative once before
+step 4: show the slow item on the page of a related product that sells
+(`pos_top_movers(days=30)` for candidates, then `propose_update_product_accessories` on
+the selling product). Only real products at their real prices. Never raise a price
+before a discount, and never show a "was" price the product did not have.
+
 Changing or ending an existing discount: `propose_update_specific_price` /
 `propose_delete_specific_price`, same one-approval batch.

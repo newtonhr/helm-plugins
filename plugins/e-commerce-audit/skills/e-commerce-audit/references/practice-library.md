@@ -1,4 +1,4 @@
-# Practice library (v0.3, 2026-10-08)
+# Practice library (v0.4, 2026-10-25)
 
 Cards for the match step. Each card is a practice published or measured by a large e-tailer, adapted for a mid-size, low-traffic, multilingual specialist shop. Grade = rigor of the source (A/B/C/Policy). Transfer is set per shop (see scoring.md). Effort is a hint (S/M/L). Default impact 1–5 is a starting point only; the € band from the shop's own margins replaces it.
 
@@ -127,6 +127,8 @@ Guardrails for all customer-facing AI text (SVC-3/4, PDP-4, PDP-6, PDP-8, CAT-1)
 | DSC-2 | schema.org Product/Offer with shipping and returns | Same | Policy | Generated | S | 3 | Rich-result coverage |
 | DSC-3 | AI-answer visibility is a by-product of clean data, not a channel | 973-shop study: ChatGPT ~0.2% of sessions (observational) | B | — | — | framing | AI referral share |
 | SEO-1 | hreflang, canonicals, facet crawl control | Google Search Central | Policy | AI audits templates | S–M | 3 | Index coverage |
+| DSC-4 | Search and AI crawlers reach product pages: robots.txt and CDN bot rules let Googlebot, Bingbot and OAI-SearchBot through, and name, price and stock are in the HTML, not only drawn by script | Google Search Central; OpenAI crawler docs | Policy | AI audits rules and templates | S | 3 | Share of crawler requests refused on product pages |
+| DSC-5 | Each language URL carries its own Product/Offer data in that language, equal to the visible price and stock | Google localized versions and product structured data guidance | Policy | Generated per language | S | 2 | Rich-result coverage per language |
 
 ### 9 Omnichannel, merchandising, speed
 
@@ -257,6 +259,10 @@ Open question: the same data shows search tests at −0.2% (219 tests) and filte
 - Google AI content guidance: https://developers.google.com/search/docs/fundamentals/using-gen-ai-content
 - Sharma, Hofman & Watts 2015: https://arxiv.org/abs/1510.05569v1
 - 973-shop AI referral study: https://searchengineland.com/llms-google-referral-conversion-study-463747
+- OpenAI crawlers (OAI-SearchBot, GPTBot): https://platform.openai.com/docs/bots
+- Google localized versions (hreflang): https://developers.google.com/search/docs/specialty/international/localized-versions
+- Google product structured data: https://developers.google.com/search/docs/appearance/structured-data/product
+- DSC-4/DSC-5 adapted from coreyhaines31/marketingskills `ai-seo` (MIT; see THIRD_PARTY_NOTICES.md)
 
 Behavior lane and evidence upgrades (added 2026-10-08):
 

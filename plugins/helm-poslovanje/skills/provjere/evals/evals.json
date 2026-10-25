@@ -1,0 +1,38 @@
+{
+  "skill_name": "provjere",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Pokreni provjere",
+      "expected_output": "Ponedjeljak skup: zaliha, cijene, katalog, pretrage bez rezultata, traženi bez zalihe. Javlja samo provjere koje su nešto našle, ostalo u jednom retku. Ništa ne predlaže.",
+      "assertions": [
+        "Pokreće provjere 1, 2, 3, 6 i 7",
+        "Ne pokreće dnevnu provjeru grešaka bez traženja",
+        "Javlja samo ono što je našlo",
+        "Ne predlaže izmjene"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Javi mi svaki dan koja roba nestaje",
+      "expected_output": "Objašnjava da se zaliha gleda tjedno jer se sporo mijenja, predlaže zakazani zadatak ponedjeljkom ako Claude to nudi, inače ručno.",
+      "assertions": [
+        "Predlaže tjedni ritam s razlogom",
+        "Spominje zakazani zadatak ili ručno pokretanje",
+        "Ne obećava automatsko slanje"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Pumpa X prodala se 20 komada u danu, treba li naručiti?",
+      "expected_output": "Prije javljanja gleda pos_article_history: jedna velika narudžba nije potražnja.",
+      "assertions": [
+        "Poziva pos_article_history",
+        "Razlikuje jednu narudžbu od potražnje"
+      ],
+      "files": []
+    }
+  ]
+}

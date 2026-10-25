@@ -1,0 +1,18 @@
+{
+  "name": "helm-poslovanje",
+  "displayName": "Helm poslovanje",
+  "version": "0.1.0",
+  "description": "Marina Stores: tjedni pregled trgovine iz Helma (narudžbe, web, blagajna, zaliha, katalog), redovne provjere koje javljaju samo kad treba nešto napraviti i glas kupaca iz pretraga i poruka. Samo čita.",
+  "author": {
+    "name": "Newton d.o.o."
+  },
+  "license": "MIT",
+  "keywords": [
+    "marina-stores",
+    "helm",
+    "izvjestaj",
+    "analitika",
+    "pos",
+    "webshop"
+  ]
+}

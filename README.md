@@ -9,6 +9,7 @@ Server Helm je u zasebnom repou; ovdje su samo pluginovi.
 | [`marina-zahtjev`](plugins/marina-zahtjev/) | Samo za Marina Stores: vođeni razgovor koji želju ili kvar pretvara u zahtjev za Newton, uz dokaze iz Helma. |
 | [`helm-katalog`](plugins/helm-katalog/) | Samo za Marina Stores: uređivanje kataloga kroz Helm — proizvod se sređuje u jednom prolazu i odobrava jednom; novi artikli iz cjenika, spajanje POS šifri, akcije, što nedostaje. |
 | [`e-commerce-audit`](plugins/e-commerce-audit/) | E-commerce audit: provjera web shopa prema dokazanim praksama velikih trgovaca, izvještaj na hrvatskom i .xlsx popis poslova po učinku i trudu. Samo čita. |
+| [`helm-poslovanje`](plugins/helm-poslovanje/) | Samo za Marina Stores: tjedni pregled trgovine, redovne provjere koje javljaju samo kad treba nešto napraviti i glas kupaca iz pretraga i poruka. Samo čita. |
 
 Instalacija, tako da nove verzije stižu same:
 
@@ -29,6 +30,11 @@ Adresa nije tajna; osoba se prijavi osobnim kodom.
 
 Testovi (bez AI-ja): `uvx pytest -q tests`, a za E-commerce audit `python3 -m unittest discover -s plugins/e-commerce-audit/skills/e-commerce-audit/scripts/tests`. Provjeravaju i da svaka tema i alat koji
 skill spomene postoji u Helmu, prema `tests/katalog.json`. Nakon promjene Studija u
-`marina-ops-mcp` osvježi katalog: `python3 scripts/katalog.py <putanja do marina-ops-mcp>`.
+`marina-ops-mcp` (ili novih alata) osvježi katalog: `python3 scripts/katalog.py <putanja do marina-ops-mcp>`.
 
 Plan novog plugina: [`.context/T-261020-helm-studio-plugin/plan.md`](.context/T-261020-helm-studio-plugin/plan.md).
+
+## Licenca
+
+MIT, © 2026 Newton d.o.o. (`LICENSE`). Dijelovi su prilagođeni iz projekata s licencom
+MIT; njihove obavijesti su u `THIRD_PARTY_NOTICES.md`.

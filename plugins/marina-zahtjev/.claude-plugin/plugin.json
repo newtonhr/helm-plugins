@@ -1,11 +1,12 @@
 {
   "name": "marina-zahtjev",
   "displayName": "Marina zahtjev",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Marina Stores: vođeni razgovor koji ideju za promjenu na web shopu pretvara u jasan zahtjev za Newton, s dokazima koje Helm sam prikupi iz shopa, skladišta i blagajne.",
   "author": {
     "name": "Newton d.o.o."
   },
+  "license": "MIT",
   "keywords": [
     "marina-stores",
     "helm",

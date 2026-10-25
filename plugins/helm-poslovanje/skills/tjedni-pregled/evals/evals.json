@@ -1,0 +1,41 @@
+{
+  "skill_name": "tjedni-pregled",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Kako je prošao prošli tjedan?",
+      "expected_output": "Poziva my_access, zatim narudžbe za oba tjedna, web, POS i katalog paralelno. Izostavlja otkazane narudžbe. Daje tri stvari za napraviti, tablicu ovaj/prošli tjedan i ništa ne mijenja.",
+      "assertions": [
+        "Poziva my_access prvo",
+        "Uspoređuje s prošlim tjednom",
+        "Izostavlja otkazane narudžbe iz prometa",
+        "Počinje s tri stvari za napraviti",
+        "Ne predlaže izmjene"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Koliki nam je postotak konverzije i koliko kupaca se vraća?",
+      "expected_output": "Konverziju daje iz telemetry_funnel udjela, ne iz broja posjetitelja. Kaže da Helm ne pokazuje kupce koji se vraćaju jer narudžbe nemaju kupca, i ne procjenjuje.",
+      "assertions": [
+        "Koristi telemetry_funnel",
+        "Ne dijeli narudžbe s visitors",
+        "Kaže da povratne kupce Helm ne pokazuje",
+        "Ne izmišlja broj"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Napravi mi tjedni pregled",
+      "expected_output": "Za osobu bez prava na web brojke izostavlja web odjeljak i to kaže u jednom retku, bez read_sql zaobilaženja.",
+      "assertions": [
+        "Izostavlja odjeljak bez prava",
+        "Navodi što je izostavljeno",
+        "Ne koristi read_sql"
+      ],
+      "files": []
+    }
+  ]
+}

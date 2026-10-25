@@ -33,7 +33,8 @@ Pitaj samo što ne znaš:
    sliku.
 7. Ako `studio_brand` ima `ponude`: Studio prvo da do 4 male ponude. Pitaj koju žele
    (A–D) i imaju li komentar. Ako komentar traži novu scenu ili kažu „nijedna”, ponovi
-   što će se napraviti i čekaj „da”. Zatim `studio_odaberi` i `studio_cekaj`.
+   što će se napraviti i čekaj „da”. Zatim `studio_odaberi` (`popust`, `scena_iz`) i
+   `studio_cekaj`.
    Ako nema `ponude`, nema odabira.
 8. `studio_status` za rezultat provjera svake slike. Na kraju poveznicu iz
    `studio_galerija` daj osobi koja je tražila. Podsjeti je na AI oznaku pri objavi.

@@ -1,0 +1,40 @@
+{
+  "skill_name": "glas-kupca",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Što kupci traže a ne nađu?",
+      "expected_output": "Čita zero_result_terms i search_terms, provjerava search_products s više pisanja, razvrstava u nemamo / imamo ne nalaze / pišu drugačije, broji i predlaže popis sinonima kroz novi-zahtjev.",
+      "assertions": [
+        "Čita sales.zero_result_terms",
+        "Provjerava search_products",
+        "Razvrstava u skupine",
+        "Predlaže novi-zahtjev za sinonime",
+        "Ne mijenja proizvode"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Evo recenzija s Googlea, izvuci što kupci govore",
+      "expected_output": "Prepisuje rečenice doslovno, bez imena, izdvaja pitanja i prigovore, nudi nacrt jezika kupaca kao studio-brand.",
+      "assertions": [
+        "Citira doslovno",
+        "Bez imena i osobnih podataka",
+        "Nudi nacrt za brand paket"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Pročitaj poruke kupaca i reci što ih muči",
+      "expected_output": "Ako my_access ne daje get_customer_threads, kaže to i traži da zalijepe poruke; ne zaobilazi.",
+      "assertions": [
+        "Provjerava my_access",
+        "Ne zaobilazi odbijanje",
+        "Traži zalijepljene poruke"
+      ],
+      "files": []
+    }
+  ]
+}

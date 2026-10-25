@@ -24,6 +24,11 @@
       "name": "e-commerce-audit",
       "source": "./plugins/e-commerce-audit",
       "description": "E-commerce audit: web shop checked against proven e-tail practices, Croatian report and .xlsx backlog ranked by impact and effort. Read-only."
+    },
+    {
+      "name": "helm-poslovanje",
+      "source": "./plugins/helm-poslovanje",
+      "description": "Marina Stores: tjedni pregled trgovine iz Helma, redovne provjere koje javljaju samo kad treba nešto napraviti i glas kupaca iz pretraga i poruka. Samo čita."
     }
   ]
 }

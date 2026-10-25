@@ -33,15 +33,15 @@ ga omogućuje. AI ne crta tekst, logo ni cijenu; to dodaje montaža.
    Zatim natpisi, kraj, tekst objave, 3–5 hashtagova, naslovnica. Jedna varijanta.
    Koristi sve fotografije proizvoda (`fotografije_proizvoda` iz `studio_video_provjeri`).
 4. `studio_video_kadrovi(knjiga)`: matična slika, ključne slike i setovi.
-   Ponavljaj dok ne kaže `gotovo`. Matičnu sliku pokaži i popravi prvu, jer se sve
-   ostale crtaju iz nje. Zatim slike redom, kao strip. Gdje piše `skripta`, reci osobi
+   Ponavljaj dok ne kaže `gotovo`. Osoba vidi slike samo na poveznici `pregled`.
+   Matičnu sliku popravi prvu: sve ostale crtaju se iz nje. Zatim slike redom, kao strip. Gdje piše `skripta`, reci osobi
    što je provjera našla.
 5. Kad osoba kaže da: `studio_video_kadrovi(knjiga, odobri=[kf_…])`.
 6. `studio_video_provjeri(knjiga)` (besplatno). Popravi što kaže. Ponovi dok nije `ok`.
 7. **Pitaj osobu**: pokaži vremensku crtu, natpise i tokene novih AI sekundi
    (`studio_tokeni`). Čekaj „da”.
-8. `studio_video_izradi(knjiga)`, pa odmah `studio_cekaj(posao)` dok ne kaže gotovo.
-   Pokaži ključne kadrove. Video se gleda i preuzima u galeriji.
+8. `studio_video_izradi(knjiga)`, pa `studio_cekaj(posao)` kako kaže njegova `napomena`.
+   Video se gleda i preuzima u galeriji.
 9. Reci osobi: glazbu dodaje u aplikaciji iz knjižnice za tvrtke.
 
 Ispravak: promijeni knjigu snimanja. Odobrene slike i gotovi AI kadrovi se ne plaćaju

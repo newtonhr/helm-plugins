@@ -132,6 +132,13 @@ the request. Always run the baseline set:
 - `search_logs` (source `prestashop`, then `php-fpm`) for the error text when the
   colleague quotes one — lane B only.
 
+**Slike proizvoda.** Kad je proizvod pronađen, u tekst zahtjeva upiši njegovu poveznicu
+s weba ili šifru (POS, Lalizas, EAN). Tada svaki `zahtjev_*` alat vraća polje
+`proizvodi` (naziv, šifra, `link`) i uz odgovor prilaže samu sliku proizvoda
+(`slika_prilozena: true`). Korisnik je vidi odmah. Ti samo reci koji je to proizvod i
+daj poveznicu, bez pitanja. Ako slike nema, reci: "Proizvod na webu nema sliku." Pitaj
+samo ako je to pogrešan proizvod.
+
 Do not use `fetch_storefront_url` in this version — it does not return the page a
 customer sees. Cap the evidence pass at about twelve tool calls. Write down every
 refusal.
@@ -178,6 +185,8 @@ otvoren poveznicom iz tog e-maila.
    kupaca. Ako na neko pitanje ne zna odgovor, zapiši "Ne znam" i ono što zna.
 4. Kad su sva otvorena pitanja odgovorena, pošalji ih **sve u jednom pozivu**:
    `zahtjev_answer(id="ZHT-…", odgovori=[{"qid": "P1", "tekst": "…"}, {"qid": "P2", "tekst": "…"}])`.
+   Ako `zahtjev_status` ili `zahtjev_answer` vrati `proizvodi`, slike su priložene uz
+   odgovor; uz pitanje reci na koji se proizvod odnosi.
 5. Javi korisniku: "Odgovori su poslani; Newtonova analiza se nastavlja sama." Ako rezultat
    kaže `otvorena_pitanja > 0`, nastavi s preostalim pitanjima istim redom.
 

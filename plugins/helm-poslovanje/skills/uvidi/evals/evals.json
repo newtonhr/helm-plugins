@@ -1,0 +1,38 @@
+{
+  "skill_name": "uvidi",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Što se dobro prodaje u dućanu, a na webu je slabo?",
+      "expected_output": "Rangira po vrijednosti (units_out × mpc), uzima top 15, traži web proizvod po nazivu i varijantama, javlja što nije na webu, nije aktivno ili mu fali podataka, s predajom dovrsi-proizvod ili novi-artikli.",
+      "assertions": [
+        "Prvo poziva my_access",
+        "Rangira po vrijednosti, ne po komadima",
+        "Ne kaže 'nije na webu' kad artikl samo nije pronađen po nazivu",
+        "Ne predlaže izmjene"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Je li novi checkout od 20.10. pomogao?",
+      "expected_output": "Uspoređuje 14 dana prije i poslije po koracima lijevka, javlja udio po koraku, upozorava na malo sesija i ne tvrdi uzrok.",
+      "assertions": [
+        "Koristi telemetry_query ili telemetry_funnel",
+        "Uspoređuje prije i poslije",
+        "Ne tvrdi da je promjena uzrok"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Kolika nam je marža na užadi?",
+      "expected_output": "Kaže da blagajna nema nabavnu cijenu pa Helm ne može izračunati maržu.",
+      "assertions": [
+        "Kaže da nema nabavne cijene",
+        "Ne izmišlja maržu"
+      ],
+      "files": []
+    }
+  ]
+}

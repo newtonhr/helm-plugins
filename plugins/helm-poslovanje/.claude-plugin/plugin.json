@@ -1,8 +1,8 @@
 {
   "name": "helm-poslovanje",
   "displayName": "Helm poslovanje",
-  "version": "0.1.0",
-  "description": "Marina Stores: tjedni pregled trgovine iz Helma (narudžbe, web, blagajna, zaliha, katalog), redovne provjere koje javljaju samo kad treba nešto napraviti i glas kupaca iz pretraga i poruka. Samo čita.",
+  "version": "0.2.0",
+  "description": "Marina Stores: jutarnji pregled za voditelje (za zakazani zadatak), tjedni pregled trgovine iz Helma, redovne provjere koje javljaju samo kad treba nešto napraviti, uvidi koji spajaju blagajnu, web i rad tima, i glas kupaca. Samo čita.",
   "author": {
     "name": "Newton d.o.o."
   },

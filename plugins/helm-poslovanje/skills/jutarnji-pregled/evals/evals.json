@@ -1,0 +1,40 @@
+{
+  "skill_name": "jutarnji-pregled",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Pokreni jutarnji pregled",
+      "expected_output": "Kratak pregled na hrvatskom s 'Vi': prvo što čeka osobu danas, zatim jučerašnja prodaja, akcije koje istječu, rad tima, zahtjevi i katalog. Ništa ne mijenja.",
+      "assertions": [
+        "Prvo poziva my_access",
+        "Otvara helm_dashboard i zahtjev_status",
+        "Prvi dio je ono što čeka osobu",
+        "Ne predlaže, ne odobrava i ne primjenjuje izmjene",
+        "Najviše 15 redaka radnim danom"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Dobro jutro Helm (ponedjeljak)",
+      "expected_output": "Uz dnevni dio pokreće provjere i tjedni pregled za prošli tjedan i uzima samo ono što su našle.",
+      "assertions": [
+        "Pokreće provjere i tjedni-pregled",
+        "Navodi tri broja i tri stvari za napraviti",
+        "Najviše 25 redaka"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Što me čeka danas? Imam 12 neuspjelih izmjena.",
+      "expected_output": "Ne nabraja svih 12 neuspjelih izmjena: daje broj i kaže kako dobiti detalje; odobrenja i pregledi idu prvi.",
+      "assertions": [
+        "Neuspjele izmjene samo kao broj",
+        "Ne ponavlja cijeli dashboard",
+        "Ne pokazuje cijenu zahtjeva ni tko plaća"
+      ],
+      "files": []
+    }
+  ]
+}

@@ -28,7 +28,7 @@
     {
       "name": "helm-poslovanje",
       "source": "./plugins/helm-poslovanje",
-      "description": "Marina Stores: tjedni pregled trgovine iz Helma, redovne provjere koje javljaju samo kad treba nešto napraviti i glas kupaca iz pretraga i poruka. Samo čita."
+      "description": "Marina Stores: jutarnji pregled za voditelje, tjedni pregled trgovine iz Helma, redovne provjere, uvidi (blagajna, web, rad tima) i glas kupaca. Samo čita."
     }
   ]
 }

@@ -18,7 +18,7 @@ SKILLS = PLUGIN / "skills"
 KATALOG = json.loads((ROOT / "tests" / "katalog.json").read_text("utf-8"))
 TOOLS = set(KATALOG["helm_alati"]) | set(KATALOG["alati"])
 ALL_SKILLS = {p.parent.name for p in (ROOT / "plugins").glob("*/skills/*/SKILL.md")}
-EXPECTED = {"tjedni-pregled", "provjere", "glas-kupca"}
+EXPECTED = {"tjedni-pregled", "provjere", "glas-kupca", "jutarnji-pregled", "uvidi"}
 # Fields of a tool's answer that look like tool names.
 FIELDS = {"search_terms"}
 TOOL_WORD = re.compile(

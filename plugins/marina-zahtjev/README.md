@@ -64,6 +64,9 @@ marina-zahtjev/
    analiza se nastavlja sama.
 
 ## Verzije
+- 0.2.6 (2026-11-03) — slike uz zahtjev: poveznica iz `zahtjev_submit` (`slike_link`) ili
+  `zahtjev_slike`; slika zalijepljena u razgovor ne stiže sama do Newtona.
+
 - 0.2.0 (2026-10-13) — odgovaranje na pitanja analize (`zahtjev_answer`, `zahtjev_thread`);
   okidač na poveznicu iz e-maila; provjera otvorenih pitanja na početku razgovora.
 
